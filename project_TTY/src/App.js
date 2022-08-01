@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          xin chao moi nguoi
+          xin chao moi nguoi nha
         </p>
       </header>
     </div>
