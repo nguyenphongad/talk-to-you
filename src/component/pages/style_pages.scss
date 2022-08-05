@@ -1,0 +1,14 @@
+.App{
+    .body{
+        width: 100%;
+            .body__row-flex{
+                padding-top: 80px;
+                padding-left: 250px;
+                padding-right: 380px;
+                .body__row-flex--main{
+                    padding: 20px;
+                }
+            }
+
+    } 
+}

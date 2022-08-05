@@ -1,0 +1,91 @@
+.menu__column--my-account{
+    flex:1;
+    border: 2px solid #92417a;
+    border-radius: 20px;
+    box-shadow: rgba(49, 7, 56, 0.438) 0px 3px 8px;
+
+    .menu__column--option_infomation{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        .menu__column-item{
+            width: 100%;height: 100%;
+        }
+        .menu__column--my-account-user{
+            flex: 1;height: 100%;
+            display: flex;
+            .my__interactive{
+                width: 100%;
+            }
+            .my-account-user__avatar{
+                flex: 0.65;
+                margin-right: 5px;
+                .user__border-us{
+                    width: 40px;height: 40px;
+                    border-radius: 100%;
+                    border: 1px solid ;
+                    padding: 2px;
+                    #id__avatar{
+                        width: 100%;height: 100%;
+                        border-radius: 100%;
+                    }
+                }
+                
+            }
+            .my-account-user__name{
+                flex: 2;
+                div {
+                    height: 100%;
+                }
+                .my__user_name--acty{
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 10px;
+                    .my_last_name{
+                        width: 100px; 
+                        color: #822366;
+                        font-weight: 600;font-size: 17px;
+                        text-overflow: ellipsis;
+                        overflow: hidden; 
+                        white-space: nowrap;
+                    }
+                    .my_activate{
+                        display: flex;
+                        align-items: center;
+                        color: blue;
+                        font-weight: 600;
+                        padding-top: 2px;
+                        i{
+                            font-size: 10px;
+                            margin-right: 5px;
+                        }
+                        .text_activate{
+                            font-size: 10px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+                
+            }
+            // .my-account-user__name--option{
+            //     flex: 0.65;height: 30px;
+            //     border: 1px solid #822366;
+            //     border-radius: 100%;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     font-size: 20px;color: #822366;
+            //     cursor: pointer;
+            // }
+        }
+        .menu__column--work{
+            flex: 1;height: 100%;
+            display: flex;
+        }
+    }
+}
+.menu__column--my-account:hover{
+    background-color: #f5e5ef;
+    transition: 0.25;
+}
