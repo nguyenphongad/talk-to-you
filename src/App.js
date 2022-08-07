@@ -5,6 +5,7 @@ import Header from './component/header.js';
 import Menu from "./component/menu.js";
 import Complementary from "./component/complementary.js";
 import "./font-awesome-6/css/all.css";
+import $ from 'jquery';
 
 class App extends Component {
   render(){

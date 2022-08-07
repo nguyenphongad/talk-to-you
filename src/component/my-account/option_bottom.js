@@ -10,7 +10,7 @@ class Option_bottom extends Component {
                     <div className="menu__column-item menu__column--my-account-user">
                         <div className="my__interactive my-account-user__avatar">
                             <div class="user__border-us">
-                                <img src={Avatar} alt="avatar" id="id__avatar"/>
+                                <img src={Avatar} alt="avatar" id="id__avatar" />
                             </div>
                         </div>
                         <div className="my__interactive my-account-user__name">
@@ -21,21 +21,26 @@ class Option_bottom extends Component {
                                     <div class="text_activate">Activate</div>
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
 
                     <div className="menu__column-item menu__column--work">
-                        <div className="my_item--work my__">
-                            <i class="fa-regular fa-comment-dots" ></i>
+                        <div className="my_item--work btn__messenger-work">
+                            <div className="btn__border--messenger">
+                                <i class="fa-regular fa-comment-dots" ></i>
                             </div>
-                        <div className="my_item--work">
-                            <i class="fa-regular fa-bell"></i>
+                        </div>
+                        <div className="my_item--work btn__notification--work">
+                            <div className="btn__border--notification">
+                                <i class="fa-regular fa-bell"></i>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         )
     }

@@ -6,7 +6,51 @@ class Friend extends Component{
             <div className="body">
                 <div className="body__row-flex">
                     <div className=" body__row-flex--main">
-                      Bạn bè
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
+                      Bạn bè<bR></bR>
                     </div>
                 </div>
             </div>
