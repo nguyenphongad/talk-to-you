@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Avatar from "../images/avatar_test.jpg";
+import Avatar from "../images/avatar_IU.jpg";
 
 class Option_bottom extends Component {
     render() {
@@ -15,7 +15,7 @@ class Option_bottom extends Component {
                         </div>
                         <div className="my__interactive my-account-user__name">
                             <div className="my__user_name--acty">
-                                <div className="my_last_name">NV Phong</div>
+                                <div className="my_last_name">NV. Phong</div>
                                 <div className="my_activate">
                                     <i class="fa-solid fa-circle-small"></i>
                                     <div class="text_activate">Activate</div>
@@ -27,17 +27,29 @@ class Option_bottom extends Component {
                     </div>
 
                     <div className="menu__column-item menu__column--work">
+
+                        <div className="my_item--work btn__setting--work">
+                            <div className="btn__border--setting">
+                                <i class="fa-solid fa-gear"></i>
+                            </div>
+                        </div>
+                        
+                        <div className="border__divide--work">
+                            <div className="item__item--border"></div>
+                        </div>
+
                         <div className="my_item--work btn__messenger-work">
                             <div className="btn__border--messenger">
                                 <i class="fa-regular fa-comment-dots" ></i>
                             </div>
                         </div>
+
                         <div className="my_item--work btn__notification--work">
                             <div className="btn__border--notification">
                                 <i class="fa-regular fa-bell"></i>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
 

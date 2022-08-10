@@ -96,7 +96,7 @@ class Menu extends Component {
                 <div className="menu__column--item ">
                   <NavLink to="/setting">
                   <i class="fa-regular fa-gear"></i>
-                    <div>Cài đặt</div>
+                    <div>C.đặt riêng tư</div>
                   </NavLink>
                 </div>
                 <div className="menu__column--item ">
@@ -177,15 +177,15 @@ class Menu extends Component {
 $("#op").hide();
 $(document).ready(function(){
   $(".menu__btn--more").click(function(){
-    $("#op").show(50);
+    $("#op").show(100);
   });
   $(".icon_back--more").click(function(){
-    $("#op").hide(50);
+    $("#op").hide(100);
   });
 });
 $(document).mouseup(function (e) {
   if ($(e.target).closest("#op").length  === 0) {
-      $("#op").hide(50);
+      $("#op").hide(100);
   }
 });
 

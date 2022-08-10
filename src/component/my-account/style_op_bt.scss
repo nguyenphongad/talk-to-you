@@ -1,8 +1,8 @@
 .menu__column--my-account{
     flex:1.1;
     border-bottom:1px solid #cea1c0;
-    border-radius: 20px;
-    box-shadow: rgba(49, 7, 56, 0.438) 0px 3px 8px;
+    border-radius: 10px;
+    box-shadow: rgba(49, 7, 56, 0.322) 0px 3px 8px;
     .menu__column--option_infomation{
         height: 100%;
         display: flex;
@@ -23,8 +23,9 @@
                 .user__border-us{
                     width: 40px;height: 40px;
                     border-radius: 100%;
-                    border: 1px solid ;
+                    border: 2px solid #cea1c0;
                     padding: 2px;
+                    
                     #id__avatar{
                         width: 100%;height: 100%;
                         border-radius: 100%;
@@ -44,7 +45,7 @@
                     .my_last_name{
                         width: 100px; 
                         color: #822366;
-                        font-weight: 600;font-size: 17px;
+                        font-weight: 600;font-size: 15px;
                         text-overflow: ellipsis;
                         overflow: hidden; 
                         white-space: nowrap;
@@ -66,32 +67,23 @@
                 }
                 
             }
-            // .my-account-user__name--option{
-            //     flex: 0.65;height: 30px;
-            //     border: 1px solid #822366;
-            //     border-radius: 100%;
-            //     display: flex;
-            //     align-items: center;
-            //     justify-content: center;
-            //     font-size: 20px;color: #822366;
-            //     cursor: pointer;
-            // }
+
         }
         .menu__column--work{
             flex: 1;height: 100%;
             display: flex;
             border-top: 1px solid #cea1c0;
+            padding-top: 10px;
             .my_item--work{
-                margin-top: 10px;
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                .btn__border--messenger,.btn__border--notification{
+                .btn__border--setting,.btn__border--messenger,.btn__border--notification{
                     width: 40px;height: 40px;
                     padding: 5px;
                     border: 1px solid #e0c4d7;
-                    border-radius: 100%;
+                    border-radius: 10px;
                     cursor: pointer;
                     transition: all 0.4s;
                     display: flex;
@@ -99,14 +91,40 @@
                     justify-content: center;
                     box-shadow: rgba(79, 16, 90, 0.171) 0px 3px 8px;
                 }
-                .btn__border--messenger:hover, .btn__border--notification:hover{
-                    background: #ddbdd3;
+                .btn__border--setting{
+                    width: 30px;height: 30px;
+                    padding: 10px;
+                    i{
+                        font-size: 17px;
+                    }
+                }
+                .btn__border--setting:hover,.btn__border--messenger:hover, .btn__border--notification:hover{
+                    background: #dfc7d7;
+                    i{
+                        color: #4e1c3f;
+                    }
                 }
                 i{
                     font-size: 22px;
                     color: #822366;
                     font-weight: 600;
+                    transition: all 0.4s;
                 }
+            }
+            .border__divide--work{
+                width: 1px;height: 100%;
+                display: flex;
+                align-items: center;
+                .item__item--border{
+                    width: 100%; ;height: 25px;
+                    background: #dfc7d7;
+                }
+            }
+            .btn__setting--work{
+                margin: 0px 0px 0px -10px;
+            }
+            .btn__messenger-work{
+                margin-left: 10px;
             }
         }
     }
