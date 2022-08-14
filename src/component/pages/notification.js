@@ -24,6 +24,16 @@ class Notification extends Component{
                         thông báo<br></br>
                         thông báo<br></br>
                         thông báo<br></br>
+                        thông báo<br></br>
+                        thông báo<br></br>
+                        thông báo<br></br>
+                        thông báo<br></br>
+                        thông báo<br></br>
+                        thông báo<br></br>
+                        thông báo<br></br>
+                        thông báo<br></br>
+                        thông báo<br></br>
+                        thông báo<br></br>
                     </div>
                 </div>
                         thông báo<br></br>

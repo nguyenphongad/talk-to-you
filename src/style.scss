@@ -19,7 +19,7 @@ body {
     .header {
         width: 100%;
         height: 60px;
-        background: linear-gradient(105deg, #8a3871, #7e3768 62%, #822366 40%);
+        background: linear-gradient(105deg, #8a3871, #7e3768 60%, #822366 40%);
         box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
         position: fixed;
         top: 0px;left: 0px;
@@ -51,7 +51,9 @@ body {
                 text-align: center;
                 display: flex;
                 align-items: center;
-                margin-left: 5px;
+                justify-content: center;
+                padding-right: 10px;
+                transition: all 0.4s;
                 i{
                     font-size: 23px;
                     display: block;
@@ -59,12 +61,114 @@ body {
                     padding-left: 5px;
                 }
             }
+            .item__icon-bas:hover{
+                transform: scale(1.1);
+            }
             
             .wrap--item-logo{
-                flex: 2.15;
+                flex: 2.17;
             }
             .wrap--item-status{
-                flex: 7.2;
+                flex: 6.25;
+                padding-left: 50px;padding-right: 50px;
+                .text_status--menu{
+                    flex: 1;
+                    font-size: 23px;
+                    display: flex;
+                    .menu__column--nav{
+                        margin-right: 20px;
+                        .item_header--item{
+                            width: 100%;height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 10px;
+                            a{
+                                width: 100%;height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-decoration: none;
+                                color: #fff3fb;
+                                padding: 7px 25px;
+                                border-radius:5px;
+                                // box-shadow: rgba(49, 7, 56, 0.363) 0px 3px 8px;
+                                transition: all 0.4s;
+                                opacity: 0.9;
+                                i{
+                                    font-size: 30px;
+                                }
+                            }
+                            a:hover{
+                                background-color: #8d3372;
+                                
+                            }
+                        }
+                    }
+                    .item_header--item a.active  {
+                            pointer-events: none;
+                            background-color: #8a3f73;
+                            opacity: 1;
+                            box-shadow: rgba(109, 45, 45, 0.178) 0px 3px 8px;
+                            i{
+                                color: #ffffff;
+                                font-weight: 600;
+                            }
+                        
+                    }
+                    .navigation_item--menu{
+                        width: 100%;height: 2px;
+                        border-radius: 3px;
+                        padding-left: 20px;
+                        margin-right: 20px;
+                        margin-top: 3px;
+                        box-shadow: rgba(43, 10, 10, 0.356) 0px 3px 8px;
+                        animation: an_navigation_menu 0.4s;
+                        transform: scaleX(0.6);
+                    }
+                    @keyframes an_navigation_menu {
+                        0%{transform: scaleX(0.4);}
+                        60%{transform: scaleX(0.8);}
+                        100%{transform: scaleX(0.6);}
+                    }
+                    .active_navigation{background-color: #ffffff;}
+                }
+
+                .text_status--work{
+                    padding: 5px;
+                    .float--work{
+                        float: right; 
+                        display: flex;
+                        border-left: 2px solid #8f4879;
+                        .box__icon--work{
+                            width: 50px;height: 38px;
+                            border: 1px solid ;
+                            border-radius: 10px;
+                            font-size: 19px;
+                            margin-left: 40px;
+                            cursor: pointer;
+                            padding: 3px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #fff3fb;
+                            color: #822366;
+                            transition: all 0.3s;
+                            box-shadow: rgba(0, 0, 0, 0.479) 0px 3px 8px;
+                        }
+                        .box__icon--work:hover{
+                            background-color: #dfc7d7;
+                            i{
+                                color: #4e1c3f;
+                            }
+                        }
+                        .box__icon--work:active{
+                            transform: scale(0.9);
+                        }
+                    
+                    }
+                }
+            
             }
             .wrap--item-dropdown{
                 flex: 3.55;
@@ -77,9 +181,10 @@ body {
         position: fixed;
         z-index: 2;
         background-color: #fff3fb;
-        padding: 10px;
-        padding-top: 70px;padding-bottom: 5px;
+        padding: 15px;
+        padding-top: 80px;padding-bottom: 5px;
         border-right: 1px solid #f3d1e9;
+        @import url("./component/my-account/style_op_bt.scss");
         .menu__column{
             width: 100%;height: 100%;
             padding-top: 0px;
@@ -87,6 +192,7 @@ body {
             display: flex;
             flex-direction: column;
             .menu__column--block--item{
+                height: 100%;
                 margin: 0px;
             } 
             .menu__column--select-li{
@@ -143,14 +249,14 @@ body {
                 }
                 
             }
-            @import url("./component/my-account/style_op_bt.scss");
+            
         }
         .menu__column--option-more{
             border: 0px solid #cea1c0;
             border-radius: 20px;
             background-color: #fff3fb;
             position: absolute;
-            left:10px;
+            left:10px;bottom: 0px;
             padding: 10px;
             display: flex;
             flex-direction: column;

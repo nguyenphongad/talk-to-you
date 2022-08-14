@@ -1,5 +1,4 @@
 .menu__column--my-account{
-    flex:1.1;
     border-bottom:1px solid #cea1c0;
     border-radius: 10px;
     box-shadow: rgba(49, 7, 56, 0.322) 0px 3px 8px;
@@ -85,7 +84,7 @@
                     border: 1px solid #e0c4d7;
                     border-radius: 10px;
                     cursor: pointer;
-                    transition: all 0.4s;
+                    transition: all 0.3s;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -103,6 +102,9 @@
                     i{
                         color: #4e1c3f;
                     }
+                }
+                .btn__border--setting:active,.btn__border--messenger:active, .btn__border--notification:active{
+                    transform: scale(0.9);
                 }
                 i{
                     font-size: 22px;
