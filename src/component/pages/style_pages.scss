@@ -8,6 +8,14 @@
                 .body__row-flex--main{
                     padding: 20px;
                 }
+                .hu{
+                    color: red;
+                    animation: hu 0.5s;
+                }
+                @keyframes hu {
+                    0%{transform: scale(0.9);}
+                    100%{transform: scale(1);}
+                }
             }
 
     } 

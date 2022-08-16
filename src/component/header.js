@@ -1,9 +1,10 @@
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import { Router, Routes,useMatch, useResolvedPath, NavLink  } from 'react-router-dom';
 import Logo from "./logo/logo_talk-to-you.png";
 
 import {withErrorBoundary} from "react-error-boundary";
 // import ErrorComponent from './errorBoundary';
+import CustomLink from './customLink';
 class Header extends Component {
   
   render(){
@@ -23,15 +24,19 @@ class Header extends Component {
                 <div className="text_status--menu">
                   <CustomLink to="/" >
                     <i class="fa-light fa-house"></i>
+                    <div className="item__text--status"> Home</div>
                   </CustomLink> 
                   <CustomLink to="/watching" >
                     <i class="fa-light fa-clapperboard-play"></i>
+                    <div className="item__text--status"> Watching</div>
                   </CustomLink>
                   <CustomLink to="/music" >
                     <i class="fa-light fa-folder-music"></i>
+                    <div className="item__text--status"> Music</div>
                   </CustomLink>
-                  <CustomLink to="/learn" >
-                    <i class="fa-brands fa-leanpub"></i>
+                  <CustomLink to="/learning" >
+                    <i class="fa-light fa-backpack"></i>
+                    <div className="item__text--status"> Learning</div>
                   </CustomLink>
                 </div>
                 <div className="text_status--work">
@@ -54,22 +59,6 @@ class Header extends Component {
   }
   
 }
-function CustomLink({ to, children, ...props }) {
-  const resolvedPath = useResolvedPath(to)
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-
-  return (
-    <div className="menu__column--nav">
-      <div className="item_header--item">
-        <NavLink to={to} {...props} >
-          {children}
-        </NavLink>
-      </div>
-      <div className={isActive ? "navigation_item--menu active_navigation " : ""}></div>
-    </div>
-  )
-}
-
-
+<CustomLink></CustomLink>
 
 export default Header ;

@@ -21,7 +21,7 @@ import Support from './pages/pages_more/support';
 import Health from './pages/pages_more/health';
 import Dating from './pages/pages_more/dating';
 import Fanpage from './pages/pages_more/fanpage';
-import Learn from './pages/learn';
+import Learning from './pages/learning';
 
 class Routes_header extends Component {
   render(){
@@ -31,7 +31,7 @@ class Routes_header extends Component {
           <Route index path="/" element={<Home />} />
           <Route path="/music" element={<Music />} />
           <Route path="/watching" element={<Watching />} />
-          <Route path="/learn" element={<Learn/>} />
+          <Route path="/learning" element={<Learning/>} />
 
           <Route path="/messenger" element={<Messenger />} />
           <Route path="/notification" element={<Notification />} />

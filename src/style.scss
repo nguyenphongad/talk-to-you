@@ -19,7 +19,7 @@ body {
     .header {
         width: 100%;
         height: 60px;
-        background: linear-gradient(105deg, #8a3871, #7e3768 60%, #822366 40%);
+        background: linear-gradient(105deg, #8a3871, #7e3768 60%, #822366 70%);
         box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
         position: fixed;
         top: 0px;left: 0px;
@@ -76,6 +76,7 @@ body {
                     font-size: 23px;
                     display: flex;
                     .menu__column--nav{
+                        width: 95px;
                         margin-right: 20px;
                         .item_header--item{
                             width: 100%;height: 100%;
@@ -85,18 +86,25 @@ body {
                             margin-right: 10px;
                             a{
                                 width: 100%;height: 100%;
-                                display: flex;
                                 justify-content: center;
+                                display: flex;
+                                flex-direction: column;
                                 align-items: center;
                                 text-decoration: none;
                                 color: #fff3fb;
-                                padding: 7px 25px;
+                                padding: 1px 20px;
                                 border-radius:5px;
-                                // box-shadow: rgba(49, 7, 56, 0.363) 0px 3px 8px;
                                 transition: all 0.4s;
-                                opacity: 0.9;
+                                opacity: 0.8;
                                 i{
-                                    font-size: 30px;
+                                    font-size: 21px;
+                                    
+                                }
+                                .item__text--status{
+                                    margin-top: 5px;
+                                    font-size: 13px;
+                                    user-select: none;
+                                    letter-spacing: 0.03rem;
                                 }
                             }
                             a:hover{
@@ -107,12 +115,23 @@ body {
                     }
                     .item_header--item a.active  {
                             pointer-events: none;
-                            background-color: #8a3f73;
+                            background-color: #8d4176;
                             opacity: 1;
-                            box-shadow: rgba(109, 45, 45, 0.178) 0px 3px 8px;
+                            box-shadow: rgba(95, 33, 33, 0.219) 0px 3px 8px;
                             i{
                                 color: #ffffff;
                                 font-weight: 600;
+                                font-size: 27px;
+                                transform: translateY(0px);
+                                animation: an_icon_menu_header 0.4s;
+                            }
+                            @keyframes an_icon_menu_header {
+                                0%{transform: translateY(10px);}
+                                50%{transform: translateY(-5px);}
+                                100%{transform: translateY(0px);}
+                            }
+                            .item__text--status{
+                                display: none;
                             }
                         
                     }
@@ -222,7 +241,7 @@ body {
                     }
                     i{
                         margin-right: 20px;margin-left:7px;
-                        font-size: 18px;
+                        font-size: 19px;
                         color: #822366;
                         
                     }
@@ -236,7 +255,7 @@ body {
                         box-shadow: rgba(49, 7, 56, 0.185) 0px 3px 8px;
                         color: #fff3fb;
                         i{
-                            font-weight:bold ;
+                            font-weight:bold;
                             color: #fff3fb;
                         }
                     }
