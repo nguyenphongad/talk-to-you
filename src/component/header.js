@@ -35,11 +35,10 @@ function Header() {
           <a href="#home" className="item__icon item__icon-logo">
             <img src={Logo} alt="logo-talk-to-you" id="id_logo" />
           </a>
-          <motion.div className="item__icon item__icon-fa" onClick={() => (modalOpen ? close() : open())}>
-
-            <i className="fa-duotone fa-circle-info"></i>
-
-          </motion.div>
+          <div className="item__icon item__icon-fa" >
+            <motion.i className="fa-duotone fa-circle-info" onClick={() => (modalOpen ? close() : open())}>
+            </motion.i>
+          </div>
         </div>
         <div className="header__wrap--item wrap--item-status">
           <div className="text_status--menu">
