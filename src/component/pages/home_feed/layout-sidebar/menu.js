@@ -2,54 +2,53 @@ import { Component } from 'react';
 import { BrowserRouter as Router, Route, Routes, NavLink, Link, useParams, BrowserRouter } from "react-router-dom";
 import { useMatch, useResolvedPath } from "react-router-dom";
 
-import Option_bottom from '../my-account/option_bottom';
+import Option_infomation from '../../../my-account/option_infomation';
 
 import $ from 'jquery';
 
 
-class Menu extends Component {
-  render() {
-    return (
-      <div>
-        <div className="menu">
-          
-          <div className="menu__column">
-            <Option_bottom></ Option_bottom>
-            <div className="menu__column--block--item menu__column--select-li">
+function Menu() {
+  return (
+    <div>
+      <div className="menu">
 
-              <div className="menu__column--item">
-                <NavLink to="/messenger">
-                  <i class="fa-regular fa-comment-dots" ></i>
-                  <div>Tin nhắn</div>
-                </NavLink>
-              </div>
-              <div className="menu__column--item">
-                <NavLink to="/notification">
-                  <i class="fa-regular fa-bell"></i>
-                  <div>Thông báo</div>
-                </NavLink>
-              </div>
+        <div className="menu__column">
+          <Option_infomation></ Option_infomation>
+          <div className="menu__column--block--item menu__column--select-li">
 
-              <div className="menu__column--item">
-                <NavLink to="/friend">
-                  <i class="fa-regular fa-user-check"></i>
-                  <div>Bạn bè</div>
-                </NavLink>
-              </div>
-              <div className="menu__column--item">
-                <NavLink to="/marketplace">
-                  <i class="fa-regular fa-cart-arrow-up"></i>
-                  <div>Marketplace</div>
-                </NavLink>
-              </div>
+            <div className="menu__column--item">
+              <NavLink to="/messenger">
+                <i class="fa-regular fa-comment-dots" ></i>
+                <div>Tin nhắn</div>
+              </NavLink>
+            </div>
+            <div className="menu__column--item">
+              <NavLink to="/notification">
+                <i class="fa-regular fa-bell"></i>
+                <div>Thông báo</div>
+              </NavLink>
+            </div>
 
-              <div className="menu__column--item">
-                <button class="menu__btn--more" >
-                  <i class="fa-regular fa-ellipsis-stroke"></i>
-                  <div>Khác</div>
-                </button>
-              </div>
-            
+            <div className="menu__column--item">
+              <NavLink to="/friend">
+                <i class="fa-regular fa-user-check"></i>
+                <div>Bạn bè</div>
+              </NavLink>
+            </div>
+            <div className="menu__column--item">
+              <NavLink to="/marketplace">
+                <i class="fa-regular fa-cart-arrow-up"></i>
+                <div>Marketplace</div>
+              </NavLink>
+            </div>
+
+            <div className="menu__column--item">
+              <button class="menu__btn--more" >
+                <i class="fa-regular fa-circle-ellipsis"></i>
+                <div>Khác</div>
+              </button>
+            </div>
+
 
             <div class="menu__column--option-more" id="op">
               <div className="menu__column--block--item menu__column--select-li scrollbar_show">
@@ -113,14 +112,13 @@ class Menu extends Component {
               </div>
             </div>
 
-            
+
           </div>
         </div>
-       </div>
-
       </div>
-    );
-  }
+
+    </div>
+  );
 
 }
 $("#op").hide();
@@ -129,12 +127,12 @@ $(document).ready(function () {
     $("#op").show(100);
   });
   $(".icon_back--more").click(function () {
-    $("#op").hide(100);
+    $("#op").hide(0);
   });
 });
 $(document).mouseup(function (e) {
   if ($(e.target).closest("#op").length === 0) {
-    $("#op").hide(100);
+    $("#op").hide(0);
   }
 });
 
@@ -143,9 +141,9 @@ function CustomLink({ to, children, ...props }) {
   const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
   return (
-      <NavLink to={to} {...props} className={isActive ? "active" : ""}>
-        {children}
-      </NavLink>
+    <NavLink to={to} {...props} className={isActive ? "active" : ""}>
+      {children}
+    </NavLink>
   )
 }
 export default Menu;

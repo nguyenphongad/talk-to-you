@@ -1,34 +1,46 @@
 .menu__column--my-account{
     width: 100%;height: 100%;
     border-radius: 10px;
-    box-shadow: rgba(49, 7, 56, 0.322) 0px 3px 8px;
+    box-shadow: rgba(49, 7, 56, 0.281) 0px 3px 8px;
     .menu__column--option_infomation{
         width: 100%;;height: 100%;
         display: flex;
         flex-direction: column;
-        padding: 7px;
+        padding: 6px;
         .background__option--information{
             width: 100%;height: 50px;
             // background-color: #a30674;
-            background: linear-gradient(115deg, #b86ea2, #a30674 40%, #822366 65%);
-            border-radius: 7px ;
-            box-shadow: #00000059 0px 3px 8px;
+            background: linear-gradient(90deg, #ca3ca0, #bb1f8c 40%, #b83d93 65%);
+            border-radius: 8px ;
+            box-shadow: #00000015 0px 3px 8px;
         }
-
+        
         .box__content--information{
             width: 100%;
             border-radius: 10px;
-            padding: 10px;
+            padding: 5px;
             // box-shadow: #00000015 0px 3px 8px;
             color: #822366;
             display: flex;
             flex-direction: column;
             align-items: center;
+            .activate__user{
+                position: relative;
+                z-index: 2;
+                display: flex;
+                bottom: -15px;
+                margin-left: -50px;
+                cursor: help;
+                i{
+                    font-size: 11px;
+                    color: rgb(73, 73, 255);
+                }
+            }
             .border__avatar--user{
                 width: 60px;height: 60px;
                 border-radius: 100%;
                 position: relative;
-                top: -45px;
+                top: -50px;
                 margin: 0px auto;
                 box-shadow: #2b0a0a57 0px 0px 8px 5px;
                 i{
@@ -36,6 +48,7 @@
                     position: relative;left: -5px;
                     font-size: 65px;
                     color: #f5d8eb;
+                    transition: 0.3s;
                 }
                 .avatar__img{
                     width: 55px;
@@ -45,7 +58,12 @@
                     box-shadow: rgba(151, 4, 219, 0.212) 0px 2px 8px;
                     
                 }
+                
             }
+            .border__avatar--user:hover + .content__name--user a{
+                text-decoration: underline;
+                    i{color: #e7b3d5;}
+                }
             .content__name--user{
                 width: 100%;
                 margin: 5px;
@@ -62,14 +80,16 @@
                         text-align: center;
                         color: #822366;
                     }
+                    
                 }
+                a:hover{text-decoration: underline;transition: 0.2s;}
             }
             .content__story--user{
                 width: 85%;height: 80px;
                 border: 1px solid #f7e9f2;
                 border-radius: 5px;
                 padding: 5px;
-                margin-top: 5px;margin-bottom: 20px;
+                margin-top: 5px;margin-bottom: 15px;
                 overflow-y: auto;
                 .content__story{
                     font-size: 14px;
@@ -79,22 +99,22 @@
             .btn__edit--story{
                 width: 100%;
                 padding: 5px;
-                background: linear-gradient(115deg, #b86ea2, #a30674 40%, #822366 65%);
+                background: linear-gradient(115deg, #ca1293, #a12f7f 40%, #962875 65%);
                 box-shadow: #00000067 0px 3px 8px;
                 border-radius: 15px;
                 cursor: pointer;
+                transition: all 0.4s;
                 .text_btn--edit{
                     color: #ffffff;
                     text-align: center;
                     font-size: 14px;
+                    i{margin-right: 10px;}
                 }
             }
-
+            .btn__edit--story:hover{
+                transform: scale(1.05);
+            }
 
         }
     }
-}
-.menu__column--my-account:hover{
-    background-color: #f5e5ef;
-    transition: 0.25;
 }

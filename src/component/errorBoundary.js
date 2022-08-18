@@ -1,7 +1,7 @@
 function ErrorComponent({error}){
     return (
-      <div >
-        error: {error.message}
+      <div style={{'margin':'100px 100px','color':'red'}}>
+        Error: - {error.message}
       </div>
     );
   }

@@ -1,11 +1,11 @@
-import { Component,React } from 'react';
+import { Component,React,useState } from 'react';
 import '../style.scss';
 
 import { Route, Routes } from "react-router-dom"
 import {withErrorBoundary} from "react-error-boundary"
 import ErrorComponent from "./errorBoundary";
 
-import Home from './pages/home';
+import Home from './pages/home_feed/home';
 import Music from './pages/music';
 import Watching from './pages/watching';
 import Messenger from './pages/messenger';
@@ -23,12 +23,13 @@ import Dating from './pages/pages_more/dating';
 import Fanpage from './pages/pages_more/fanpage';
 import Learning from './pages/learning';
 
-class Routes_header extends Component {
-  render(){
+
+function Routes_header() {
+ 
     return (
       <div className="App">
         <Routes>
-          <Route index path="/" element={<Home />} />
+          <Route index path="/feed" element={<Home />} />
           <Route path="/music" element={<Music />} />
           <Route path="/watching" element={<Watching />} />
           <Route path="/learning" element={<Learning/>} />
@@ -46,10 +47,11 @@ class Routes_header extends Component {
           <Route path="/dating" element={<Dating />} />
           <Route path="/support" element={<Support />} />
           <Route path="*" element={<NotFound />} />
+          
         </Routes>
+       
       </div>
     );
-  }
   
 }
 
