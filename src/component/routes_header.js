@@ -1,13 +1,13 @@
-import { Component,React,useState } from 'react';
+import { Component, React, useState } from 'react';
 import '../style.scss';
 
 import { Route, Routes } from "react-router-dom"
-import {withErrorBoundary} from "react-error-boundary"
+import { withErrorBoundary } from "react-error-boundary"
 import ErrorComponent from "./errorBoundary";
 
 import Home from './pages/home_feed/home';
 import Music from './pages/music';
-import Watching from './pages/watching';
+import Watching from './pages/watching/watching';
 import Messenger from './pages/messenger';
 import Notification from './pages/notification';
 import NotFound from './pages/notFound';
@@ -25,36 +25,36 @@ import Learning from './pages/learning';
 
 
 function Routes_header() {
- 
-    return (
-      <div className="App">
-        <Routes>
-          <Route index path="/feed" element={<Home />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/watching" element={<Watching />} />
-          <Route path="/learning" element={<Learning/>} />
 
-          <Route path="/messenger" element={<Messenger />} />
-          <Route path="/notification" element={<Notification />} />
-          <Route path="/friend" element={<Friend />} />
-          <Route path="/marketplace" element={<Marketplace />} />
+  return (
+    <>
+      <Routes>
+        <Route index path="/feed" element={<Home />} />
+        <Route path="/music" element={<Music />} />
+        <Route path="/watching" element={<Watching />} />
+        <Route path="/learning" element={<Learning />} />
 
-          <Route path="/setting" element={<Setting />} />
-          <Route path="/fanpage" element={<Fanpage />} />
-          <Route path="/saved" element={<Saved />} />
-          <Route path="/game" element={<Game />} />
-          <Route path="/health" element={<Health />} />
-          <Route path="/dating" element={<Dating />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="*" element={<NotFound />} />
-          
-        </Routes>
-       
-      </div>
-    );
-  
+        <Route path="/messenger" element={<Messenger />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/friend" element={<Friend />} />
+        <Route path="/marketplace" element={<Marketplace />} />
+
+        <Route path="/setting" element={<Setting />} />
+        <Route path="/fanpage" element={<Fanpage />} />
+        <Route path="/saved" element={<Saved />} />
+        <Route path="/game" element={<Game />} />
+        <Route path="/health" element={<Health />} />
+        <Route path="/dating" element={<Dating />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="*" element={<NotFound />} />
+
+      </Routes>
+
+    </>
+  );
+
 }
 
-export default withErrorBoundary(Routes_header , {
+export default withErrorBoundary(Routes_header, {
   FallbackComponent: ErrorComponent,
 });

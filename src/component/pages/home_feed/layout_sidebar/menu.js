@@ -9,8 +9,8 @@ import $ from 'jquery';
 
 function Menu() {
   return (
-    <div>
-      <div className="menu">
+    <>
+      <div className="item_content--home menu">
 
         <div className="menu__column">
           <Option_infomation></ Option_infomation>
@@ -117,7 +117,7 @@ function Menu() {
         </div>
       </div>
 
-    </div>
+    </>
   );
 
 }

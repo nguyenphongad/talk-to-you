@@ -59,17 +59,17 @@ body {
                 align-items: center;
                 justify-content: center;
                 padding-right: 10px;
-                transition: all 0.4s;
                 i {
-                    font-size: 26px;
+                    font-size: 27px;
                     display: block;
                     cursor: pointer;
                     padding-left: 5px;
                     color: #ffffff;
+                    transition: all 0.4s;
                 }
-            }
-            .item__icon-fa:hover {
-                transform: scale(1.1);
+                i:hover {
+                    transform: scale(1.1);
+                }
             }
 
             .wrap--item-logo {
@@ -106,7 +106,7 @@ body {
                                 padding: 1px 20px;
                                 border-radius: 5px;
                                 transition: all 0.4s;
-                                opacity: 0.8;
+                                opacity: 0.85;
                                 i {
                                     font-size: 20px;
                                     margin-bottom: 2px;
@@ -220,13 +220,15 @@ body {
     }
     .menu {
         width: 240px;
+        flex: 2;
         height: 100vh;
-        position: fixed;
+        position: sticky;
+        top: 0px;
         z-index: 2;
         background-color: #fff3fb;
         padding: 15px;
         padding-top: 80px;
-        border-right: 1px solid #f3d1e9;
+        border-right: 1px solid #f8e1f1;
         @import url("./component/my-account/style_option_info.scss");
         .menu__column {
             width: 100%;
@@ -363,14 +365,4 @@ body {
         }
     }
 
-    .complementary {
-        width: 350px;
-        height: 100vh;
-        background-color: #fff3fb;
-        border-left: 1px solid #f3d1e9;
-        position: fixed;
-        top: 60px;
-        right: 0px;
-        padding: 20px;
-    }
 }
