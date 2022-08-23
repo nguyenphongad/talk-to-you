@@ -18,23 +18,35 @@ function Create_status_feed() {
 
     const list_btn_control_work = [
         {
-            icon : "fa-regular fa-video-plus",
-            text : "Photo"
+            icon : "fa-regular fa-folder-image",
+            id : "red",
+            text : "Photo",
         },
         {
             icon : "fa-regular fa-video-plus",
-            text : "Video"
+            id : "blue",
+            text : "Video",
         },
         {
-            icon : "fa-regular fa-face-smile",
-            text : "Feeling"
+            icon : "fa-light fa-face-laugh-wink",
+            id: "yellow",
+            text : "Feeling",
+        },
+        {
+            icon : "fa-regular fa-calendar-pen",
+            id : "green",
+            text : "Lesson",
         },
     ];
     const list_element = list_btn_control_work.map((item_control_work, index) =>{
         return (
-            <motion.div className="item_control--work" onClick={() => (modalOpen ? close() : open())}>
-                <i className={item_control_work.icon} ></i>
-                {item_control_work.text}
+            <motion.div className="item_control--work" 
+            onClick={() => (modalOpen ? close() : open())}
+            >
+                <i className={item_control_work.icon} id={item_control_work.id}></i>
+                <div className="btn__text--work">
+                    {item_control_work.text}
+                </div>
             </motion.div>
         )
     });

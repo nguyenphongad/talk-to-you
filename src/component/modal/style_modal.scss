@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 218, 247, 0.856);
+    background-color: rgba(240, 217, 234, 0.89);
     z-index: 99;
 }
 .modal{
@@ -25,14 +25,13 @@
         }
         .header__text{
             flex: 9;
-            background-color: #f8e3ed;
-            border-radius: 10px;
+            // border-bottom: 1px solid #e4c7dc;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: left;
             padding: 12px;
+            padding-left: 20px;
             color: #822366;
-            box-shadow: rgba(42, 11, 48, 0.226) 0px 3px 8px;
             .text_heading_header{
                 font-size: 22px;
                 font-weight:bold;
@@ -44,29 +43,32 @@
             align-items: center;
             justify-content: right;
             .btn__close--icon{
-                width: 40px;height: 40px;
+                width: 50px;height: 50px;
                 padding: 3px;
-                background-color: #a34086;
-                box-shadow: rgba(45, 6, 53, 0.219) 0px 3px 8px;
+                // background-color: #a34086;
+                // background-color: #fae7f0;
+                border: 1px solid #e9ccda;
                 border-radius: 100%;
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 transition: all 0.4s;
-                color: #ffffff;
+                color: #822366;
                 i{
-                    font-size: 25px;
+                    font-size: 27px;
                 }
             }
-            .btn__close--icon:hover{transform: scale(1.1);}
+            .btn__close--icon:hover{
+                background-color: #f7e1f1;
+            }
         }
     }
     .modal__body{
         
         width: 100%;max-height: 350px;
         padding: 25px;
-        background-color: #f5e3ef;
+        background-color: #faeff6;
         border-radius: 15px;
         font-size: 20px;
         overflow-y: auto;
