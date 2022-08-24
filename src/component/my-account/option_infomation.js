@@ -32,10 +32,10 @@ class Option_infomation extends Component {
                                 </div>
                         </div>
 
-                        <div className="btn__edit--story">
+                        <div className="btn__edit--bio">
                             <div className="text_btn--edit">
                                 <i class="fa-light fa-pencil"></i> 
-                                Sửa tiểu sử
+                                Edit bio
                             </div>
                         </div>
                     </div>

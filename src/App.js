@@ -1,6 +1,7 @@
 import { Component, React } from 'react';
 
 
+
 import './style.scss';
 import './component/pages/style_pages.scss';
 import "./component/pages/home_feed/content_feed/style_status_feed.scss";

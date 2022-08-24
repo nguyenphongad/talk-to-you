@@ -107,11 +107,11 @@
                     text-align: center;
                 }
             }
-            .btn__edit--story {
+            .btn__edit--bio{
                 width: 100%;
                 padding: 5px;
                 // background: linear-gradient(115deg, #ca1293, #a12f7f 40%, #962875 65%);
-                box-shadow: #a38d9a4d 0px 2px 7px 0px;
+                // box-shadow: #a38d9a4d 0px 2px 7px 0px;
                 border: 1px solid #f1d1e8;
                 border-radius: 15px;
                 cursor: pointer;
@@ -128,7 +128,7 @@
                 }
             }
             .btn__edit--story:hover {
-                transform: scale(1.05);
+                background-color: #f7e1f1;
             }
         }
     }

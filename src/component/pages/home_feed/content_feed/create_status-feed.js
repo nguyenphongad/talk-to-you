@@ -5,51 +5,62 @@ import ErrorComponent from '../../../errorBoundary';
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "../../../modal/modal_infomation";
 import Avatar from "../../../images/avatar_IU.jpg";
-
-function Box_create_status() {
-
-}
+import LoadingIcon from './loading';
+import Typical from 'react-typical';
 
 function Create_status_feed() {
 
     const [modalOpen, setModalOpen] = useState(false);
+
     const close = () => setModalOpen(false);
     const open = () => setModalOpen(true);
 
     const list_btn_control_work = [
         {
-            icon : "fa-regular fa-folder-image",
-            id : "red",
-            text : "Photo",
+            icon: "fa-regular fa-folder-image",
+            id: "red",
+            text: "Photo",
         },
         {
-            icon : "fa-regular fa-video-plus",
-            id : "blue",
-            text : "Video",
+            icon: "fa-regular fa-video-plus",
+            id: "blue",
+            text: "Video",
         },
         {
-            icon : "fa-light fa-face-laugh-wink",
+            icon: "fa-light fa-face-laugh-wink",
             id: "yellow",
-            text : "Feeling",
+            text: "Feeling",
         },
         {
-            icon : "fa-regular fa-calendar-pen",
-            id : "green",
-            text : "Lesson",
+            icon: "fa-regular fa-calendar-pen",
+            id: "green",
+            text: "Lesson",
         },
+        
     ];
-    const list_element = list_btn_control_work.map((item_control_work, index) =>{
+
+    const list_element = list_btn_control_work.map((item_control_work, index) => {
         return (
-            <motion.div className="item_control--work" 
-            onClick={() => (modalOpen ? close() : open())}
+            <motion.div className="item_control--work"
+                onClick={() => (modalOpen ? close() : open())}
             >
                 <i className={item_control_work.icon} id={item_control_work.id}></i>
                 <div className="btn__text--work">
                     {item_control_work.text}
+
                 </div>
+
             </motion.div>
+
         )
+
     });
+
+    const Content_create_status = () => {
+        return (
+            <div>ok</div>
+        )
+    }
 
     return (
         <>
@@ -62,8 +73,18 @@ function Create_status_feed() {
                             </div>
                         </div>
                         <motion.div className="item_header create__text--think"
-                        onClick={() => (modalOpen ? close() : open())}>
-                            <div className="btn__input--content">Bạn có suy nghĩ gì sao?</div>
+                            onClick={() => (modalOpen ? close() : open())}>
+                            <div className="btn__input--content" id="id_context">
+                                <Typical
+                                    loop={Infinity}
+                                    wrapper="div"
+                                    steps={[
+                                        "Bạn có suy nghĩ gì sao?",4000,
+                                        "Tôi đoán hôm nay bạn rất vui nha :)",4000,
+                                        "Viết lên cảm xúc của bạn ngay đây nhé !",4000
+                                    ]}
+                                />
+                            </div>
                         </motion.div>
 
                     </div>
@@ -85,12 +106,14 @@ function Create_status_feed() {
                         modalOpen={modalOpen}
                         handleClose={close}
                         text_header="Create status"
+                        content_modal={<Content_create_status />}
                     />}
 
                 </AnimatePresence>
             </div>
         </>
     )
+
 }
 <ErrorComponent></ErrorComponent>
 

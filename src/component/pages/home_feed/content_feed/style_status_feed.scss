@@ -49,9 +49,9 @@
                     align-items: center;
                     padding-left: 15px;
                     font-size: 17px;
-                    color: #a3588b;
+                    color: #8d3f74;
                     user-select: none;
-                    letter-spacing:0.3px;
+                    letter-spacing:0.2px;
                 }
             }
         }
@@ -73,7 +73,7 @@
                     justify-content: center;
                     cursor: pointer;
                     user-select: none;
-                    color: #822366;
+                    color: #c25aa3;
                     transition: all 0.4s;
                     margin:0px 10px;
                     i{
@@ -85,8 +85,9 @@
                     #yellow{color: rgb(211, 175, 16);}
                     #green{color: rgb(72, 185, 72);}
                     .btn__text--work{
-                        font-size: 16px;
+                        font-size: 15px;
                         margin-left: 12px;
+                        font-weight: 600;
                     }
                 }
                 .item_control--work:hover{
