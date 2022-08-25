@@ -10,7 +10,7 @@ import Music from './pages/music';
 import Watching from './pages/watching/watching';
 import Messenger from './pages/messenger';
 import Notification from './pages/notification';
-import NotFound from './pages/notFound';
+import NotFound from './pages/notFound/notFound';
 import Friend from './pages/friend';
 import Marketplace from './pages/marketplace';
 

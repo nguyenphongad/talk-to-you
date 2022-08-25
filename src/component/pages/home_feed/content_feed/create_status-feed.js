@@ -79,9 +79,8 @@ function Create_status_feed() {
                                     loop={Infinity}
                                     wrapper="div"
                                     steps={[
-                                        "Bạn có suy nghĩ gì sao?",4000,
-                                        "Tôi đoán hôm nay bạn rất vui nha :)",4000,
-                                        "Viết lên cảm xúc của bạn ngay đây nhé !",4000
+                                        "Bạn có suy nghĩ gì sao?",3000,
+                                        "Viết lên cảm xúc của bạn ngay đây nhé !",3000
                                     ]}
                                 />
                             </div>
