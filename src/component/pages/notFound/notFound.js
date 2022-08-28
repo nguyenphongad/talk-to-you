@@ -11,12 +11,12 @@ class NotFound extends Component {
                             <div className="block__comlumn--notFound">
                                 <div className="item__notification--notFound">
                                     <i class="fa-duotone fa-link-slash"></i>
-                                    <div className="text_h2">404 - Not found !</div>
+                                    <div className="text_h2">404 - Not found </div>
                                 </div>
                                 <div className="item__notification--notFound">
                                     <div className="text__notification--notFound">
                                         Trang bạn đang truy cập đã bị gỡ bỏ hoặc 
-                                        đường dẫn không tồn tại
+                                        đường dẫn không tồn tại !
                                     </div>
                                 </div>
                                 <div className="item__notification--notFound">

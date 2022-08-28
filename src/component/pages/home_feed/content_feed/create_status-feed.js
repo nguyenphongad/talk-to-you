@@ -76,11 +76,11 @@ function Create_status_feed() {
                             onClick={() => (modalOpen ? close() : open())}>
                             <div className="btn__input--content" id="id_context">
                                 <Typical
-                                    loop={Infinity}
+                                    // loop={Infinity}
                                     wrapper="div"
                                     steps={[
-                                        "Bạn có suy nghĩ gì sao?",3000,
-                                        "Viết lên cảm xúc của bạn ngay đây nhé !",3000
+                                        "Bạn có suy nghĩ gì sao?",2000,
+                                        // "Viết lên cảm xúc của bạn ngay đây nhé !",3000
                                     ]}
                                 />
                             </div>
