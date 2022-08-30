@@ -64,8 +64,8 @@ function Create_status_feed() {
 
     return (
         <>
-            <div className="box__create-status">
-                <div className="body__create">
+            <div className="box__status">
+                <div className="body__create--status">
                     <div className="item__nav header__create">
                         <div className="item_header btn__avatar--user">
                             <div className="border__avatar--user">
@@ -110,6 +110,7 @@ function Create_status_feed() {
 
                 </AnimatePresence>
             </div>
+            <hr></hr>
         </>
     )
 

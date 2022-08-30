@@ -46,8 +46,6 @@
             .btn__close--icon{
                 width: 40px;height: 40px;
                 padding: 3px;
-                // background-color: #a34086;
-                // background-color: #fae7f0;
                 border: 1px solid #e9ccda;
                 border-radius: 100%;
                 cursor: pointer;
@@ -62,6 +60,9 @@
             }
             .btn__close--icon:hover{
                 background-color: #f7e1f1;
+            }
+            .btn__close--icon:active{
+                transform: scale(0.85);
             }
         }
     }
