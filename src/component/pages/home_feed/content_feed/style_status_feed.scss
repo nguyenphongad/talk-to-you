@@ -4,7 +4,7 @@
     .body__create--status {
         width: 100%;
         border-radius: 15px;
-        background-color: #ffeffa;
+        background-color: #ffe9f8;
         box-shadow: #a38d9a8e 0px 2px 7px 0px;
         display: flex;
         flex-direction: column;
@@ -40,9 +40,10 @@
             }
             .create__text--think {
                 flex: 9;
-                border: 1px solid #ddb6d2;
+                border: 1px solid #c995ba;
                 border-radius: 15px;
-                background-color: #fce3f446;
+                // background-color: #fce3f446;
+                background-color: #f5c6e68c;
                 cursor: text;
                 .btn__input--content {
                     width: 100%;
@@ -51,7 +52,7 @@
                     align-items: center;
                     padding-left: 15px;
                     font-size: 17px;
-                    color: #8d3f74;
+                    color: #692654;
                     user-select: none;
                     letter-spacing: 0.2px;
                 }
@@ -67,7 +68,8 @@
                 flex-direction: row;
                 .item_control--work {
                     width: 100%;
-                    border: 1px solid #f1d1e8;
+                    border: 1px solid #e4bcd8;
+                    background-color: #f5c6e68c;
                     display: flex;
                     padding: 6px;
                     border-radius: 15px;
@@ -75,7 +77,7 @@
                     justify-content: center;
                     cursor: pointer;
                     user-select: none;
-                    color: #c25aa3;
+                    color: #b9549b;
                     transition: all 0.4s;
                     margin: 0px 10px;
                     i {
@@ -113,15 +115,15 @@
         box-shadow: #a38d9aa8 0px 2px 7px 0px;
         display: flex;
         flex-direction: column;
+        background-color: #dd44af;
         .item__column--status {
             width: 100%;
         }
         .header__status {
             display: flex;
             width: 100%;
-            box-shadow: #7c6d7652 0px 2px 7px 0px;
+            // box-shadow: #7c6d7652 0px 2px 7px 0px;
             border-radius: 15px 15px 0px 0px;
-            background-color: #dd44af;
             color: #ffffff;
             padding: 5px 5px 0px 5px;
             .block__item--header {
@@ -198,14 +200,13 @@
         }
         .body__status {
             height: 100%;
-            // padding:5px;
+            padding:2px;
             .border__status {
                 img {
                     max-width: 678px;
                     height: 100%;
-                    // border-radius: 10px;
-                    border: 1px solid #ce41a4;
-                    transition: all 0.4s;
+                    border-radius: 15px;
+                    box-shadow: #85767f8c 0px 2px 7px 0px;
                 }
             }
         }
