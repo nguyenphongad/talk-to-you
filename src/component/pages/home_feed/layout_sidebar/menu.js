@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, NavLink, Link, useParams, BrowserRouter } from "react-router-dom";
 import { useMatch, useResolvedPath } from "react-router-dom";
 
@@ -18,102 +18,76 @@ function Menu() {
 
             <div className="menu__column--item">
               <NavLink to="/messenger">
-                <i class="fa-regular fa-comment-dots" ></i>
-                <div>Tin nhắn</div>
+                <i class="fa-duotone fa-messages"></i>
+                <div>Message</div>
               </NavLink>
             </div>
             <div className="menu__column--item">
               <NavLink to="/notification">
-                <i class="fa-regular fa-bell"></i>
-                <div>Thông báo</div>
+                <i class="fa-duotone fa-bell"></i>
+                <div>Notification</div>
               </NavLink>
             </div>
 
             <div className="menu__column--item">
               <NavLink to="/friend">
-                <i class="fa-regular fa-user-check"></i>
-                <div>Bạn bè</div>
+                <i class="fa-duotone fa-user-group"></i>
+                <div>Friends</div>
               </NavLink>
             </div>
             <div className="menu__column--item">
               <NavLink to="/marketplace">
-                <i class="fa-regular fa-cart-arrow-up"></i>
+                <i class="fa-duotone fa-cart-shopping-fast"></i>
                 <div>Marketplace</div>
+              </NavLink>
+            </div>
+            <div className="menu__column--item ">
+              <NavLink to="/setting">
+                <i class="fa-duotone fa-gear"></i>
+                <div>Personal</div>
+              </NavLink>
+            </div>
+            <div className="menu__column--item ">
+              <NavLink to="/fanpage">
+                <i class="fa-duotone fa-pager"></i>
+                <div>Fanpage</div>
+              </NavLink>
+            </div>
+
+            <div className="menu__column--item ">
+              <NavLink to="/saved">
+                <i class="fa-duotone fa-floppy-disk-circle-arrow-right"></i>
+                <div>Saved</div>
+              </NavLink>
+            </div>
+            <div className="menu__column--item">
+              <NavLink to="/game">
+                <i class="fa-duotone fa-game-console-handheld"></i>
+                <div>Play game</div>
+              </NavLink>
+            </div>
+            <div className="menu__column--item">
+              <NavLink to="/health">
+                <i class="fa-duotone fa-notes-medical"></i>
+                <div>Health</div>
+              </NavLink>
+            </div>
+            <div className="menu__column--item">
+              <NavLink to="/dating">
+                <i class="fa-duotone fa-heart-circle-bolt"></i>
+                <div>Dating</div>
               </NavLink>
             </div>
 
             <div className="menu__column--item">
-              <button class="menu__btn--more" >
-                <i class="fa-regular fa-circle-ellipsis"></i>
-                <div>Khác</div>
-              </button>
+              <NavLink to="/support">
+                <i class="fa-duotone fa-circle-info"></i>
+                <div>Helps</div>
+              </NavLink>
             </div>
-
-
-            <div class="menu__column--option-more" id="op">
-              <div className="menu__column--block--item menu__column--select-li scrollbar_show">
-                <div className="header_li--more">
-                  <div className="icon_back--more">
-                    <i class="fa-light fa-xmark"></i>
-                  </div>
-                  <div className="text__option--more">Mục khác</div>
-                </div>
-                <div className="menu__column--item ">
-                  <NavLink to="/setting">
-                    <i class="fa-regular fa-gear"></i>
-                    <div>C.đặt riêng tư</div>
-                  </NavLink>
-                </div>
-                <div className="menu__column--item ">
-                  <NavLink to="/fanpage">
-                    <i class="fa-regular fa-page"></i>
-                    <div>Fanpage</div>
-                  </NavLink>
-                </div>
-
-                <div className="menu__column--item ">
-                  <NavLink to="/saved">
-                    <i class="fa-regular fa-bookmark"></i>
-                    <div>Đã lưu</div>
-                  </NavLink>
-                </div>
-                <div className="menu__column--item">
-                  <NavLink to="/game">
-                    <i class="fa-regular fa-gamepad"></i>
-                    <div>Play game</div>
-                  </NavLink>
-                </div>
-                <div className="menu__column--item">
-                  <NavLink to="/health">
-                    <i class="fa-regular fa-book-heart"></i>
-                    <div>Sức khỏe</div>
-                  </NavLink>
-                </div>
-                <div className="menu__column--item">
-                  <NavLink to="/dating">
-                    <i className="fa-regular fa-heart-half-stroke"></i>
-                    <div>Hẹn hò</div>
-                  </NavLink>
-                </div>
-
-                <div className="menu__column--item">
-                  <NavLink to="/support">
-                    <i class="fa-regular fa-circle-question"></i>
-                    <div>Trợ giúp</div>
-                  </NavLink>
-                </div>
-                <div className="menu__column--item">
-                  <NavLink to="/support">
-                    <i class="fa-regular fa-circle-question"></i>
-                    <div>Trợ giúp</div>
-                  </NavLink>
-                </div>
-
-              </div>
-            </div>
-
 
           </div>
+
         </div>
       </div>
 
@@ -121,20 +95,20 @@ function Menu() {
   );
 
 }
-$("#op").hide();
-$(document).ready(function () {
-  $(".menu__btn--more").click(function () {
-    $("#op").show(100);
-  });
-  $(".icon_back--more").click(function () {
-    $("#op").hide(0);
-  });
-});
-$(document).mouseup(function (e) {
-  if ($(e.target).closest("#op").length === 0) {
-    $("#op").hide(0);
-  }
-});
+// $("#op").hide();
+// $(document).ready(function () {
+//   $(".menu__btn--more").click(function () {
+//     $("#op").show(100);
+//   });
+//   $(".icon_back--more").click(function () {
+//     $("#op").hide(0);
+//   });
+// });
+// $(document).mouseup(function (e) {
+//   if ($(e.target).closest("#op").length === 0) {
+//     $("#op").hide(0);
+//   }
+// });
 
 function CustomLink({ to, children, ...props }) {
   const resolvedPath = useResolvedPath(to)

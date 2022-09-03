@@ -22,17 +22,17 @@ function Create_status_feed() {
             text: "Photo",
         },
         {
-            icon: "fa-regular fa-video-plus",
+            icon: "fa-light fa-camera-retro",
             id: "blue",
             text: "Video",
         },
         {
-            icon: "fa-light fa-face-laugh-wink",
+            icon: "fa-light fa-face-awesome",
             id: "yellow",
             text: "Feeling",
         },
         {
-            icon: "fa-regular fa-calendar-pen",
+            icon: "fa-duotone fa-graduation-cap",
             id: "green",
             text: "Lesson",
         },
@@ -56,9 +56,13 @@ function Create_status_feed() {
 
     });
 
-    const Content_create_status = () => {
+    const Content_create_status_modal = () => {
         return (
-            <div>ok</div>
+            <div className="box__create--status">
+                <div className="body__create">
+                    create_status
+                </div>
+            </div>
         )
     }
 
@@ -79,7 +83,7 @@ function Create_status_feed() {
                                     // loop={Infinity}
                                     wrapper="div"
                                     steps={[
-                                        "Bạn có suy nghĩ gì sao?",2000,
+                                        "What do you think?",2000,
                                         // "Viết lên cảm xúc của bạn ngay đây nhé !",3000
                                     ]}
                                 />
@@ -105,12 +109,14 @@ function Create_status_feed() {
                         modalOpen={modalOpen}
                         handleClose={close}
                         text_header="Create status"
-                        content_modal={<Content_create_status />}
+                        content_modal={<Content_create_status_modal />}
                     />}
 
                 </AnimatePresence>
             </div>
-            <hr></hr>
+            <div class="border--separation">
+                <div className="border-inline"></div>
+            </div>
         </>
     )
 

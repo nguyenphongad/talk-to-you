@@ -34,7 +34,7 @@ class Option_infomation extends Component {
 
                         <div className="btn__edit--bio">
                             <div className="text_btn--edit">
-                                <i class="fa-light fa-pencil"></i> 
+                                <i class="fa-duotone fa-pen"></i>
                                 Edit bio
                             </div>
                         </div>

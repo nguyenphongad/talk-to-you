@@ -36,7 +36,7 @@ function Header() {
             <img src={Logo} alt="logo-talk-to-you" id="id_logo" />
           </a>
           <div className="item__icon item__icon-fa" >
-            <motion.i className="fa-regular fa-circle-info" onClick={() => (modalOpen ? close() : open())}>
+            <motion.i className="fa-light fa-circle-info" onClick={() => (modalOpen ? close() : open())}>
             </motion.i>
           </div>
         </div>
