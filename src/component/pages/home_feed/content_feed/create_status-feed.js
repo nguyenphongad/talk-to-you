@@ -8,6 +8,9 @@ import Avatar from "../../../images/avatar_IU.jpg";
 import LoadingIcon from './loading';
 import Typical from 'react-typical';
 
+import Content_create_status_modal from './content_create_status_modal';
+
+
 function Create_status_feed() {
 
     const [modalOpen, setModalOpen] = useState(false);
@@ -36,7 +39,7 @@ function Create_status_feed() {
             id: "green",
             text: "Lesson",
         },
-        
+
     ];
 
     const list_element = list_btn_control_work.map((item_control_work, index) => {
@@ -53,18 +56,7 @@ function Create_status_feed() {
             </motion.div>
 
         )
-
     });
-
-    const Content_create_status_modal = () => {
-        return (
-            <div className="box__create--status">
-                <div className="body__create">
-                    create_status
-                </div>
-            </div>
-        )
-    }
 
     return (
         <>
@@ -83,7 +75,7 @@ function Create_status_feed() {
                                     // loop={Infinity}
                                     wrapper="div"
                                     steps={[
-                                        "What do you think?",2000,
+                                        "What do you think?", 2000,
                                         // "Viết lên cảm xúc của bạn ngay đây nhé !",3000
                                     ]}
                                 />
@@ -97,7 +89,6 @@ function Create_status_feed() {
                         </div>
                     </div>
                 </div>
-
                 <AnimatePresence
 
                     initial={false}

@@ -5,20 +5,13 @@ import Picture_status_1 from "../../../images/photo_status_IU/picture_status.jpg
 
 import Avatar_2 from "../../../images/avatar_ngoc.jpg";
 import Picture_status_2 from "../../../images/photo_status_IU/anh_status_ngoc.jpg";
-// import Anh_nen_dt from "../../../images/photo_status_IU/anh_nen_dt.jpg";
 
 
 import { NavLink } from 'react-router-dom';
-import Collapsible from 'react-collapsible';
 import useCollapse from 'react-collapsed';
 
 
 function Status_feed() {
-  const [show, setShow] = useState(false);
-  const Open_modal = () => {
-    setShow(!show);
-  };
-
   const config = {
     duration: 300
   };
@@ -36,7 +29,7 @@ function Status_feed() {
       date_create_status: "2 giờ trước",
 
       content: "지은 언니 바빠요?ㅜㅜ 너무 보고 싶어서🤣😂👍",
-      image: Picture_status_1 ,
+      image: Picture_status_1,
       view_comment: "47.3K " + "comments",
       view_like: "5.5M " + "like",
       view_share: "17.5K " + "shares",
@@ -47,19 +40,18 @@ function Status_feed() {
       image_avatar: Avatar_2,
       firt_name: "Ngọc ",
       last_name: "Phạm",
-      active_license:false,
+      active_license: false,
       id_user: "@ngocpham509",
       active_type_status: "fa-solid fa-badge-check",
       date_create_status: "2 phút trước",
 
       content: "Ngày hôm nay thật vui 🤣",
-      image: Picture_status_2 ,
-      // image: Anh_nen_dt ,
+      image: Picture_status_2,
       view_comment: "1 " + "comments",
       view_like: "100 " + "like",
       view_share: "0 " + "shares",
 
-    }
+    },
   ];
 
 
@@ -74,7 +66,7 @@ function Status_feed() {
                 <div className="block__item--header block__avatar--user">
                   <div className="border__avatar--user">
                     <NavLink to="#user" className="">
-                      <img src={item_info_header_status.image_avatar} />
+                      <img src={item_info_header_status.image_avatar} loading="lazy" />
                     </NavLink>
                   </div>
                 </div>
@@ -107,8 +99,8 @@ function Status_feed() {
 
                         <i class="fa-regular fa-period"></i>
                         <NavLink to="#link_status">
-                          <span className="hover_text_under"> 
-                          {item_info_header_status.date_create_status}
+                          <span className="hover_text_under">
+                            {item_info_header_status.date_create_status}
                           </span>
                         </NavLink>
 
@@ -122,6 +114,7 @@ function Status_feed() {
                   </div>
                 </div>
               </div>
+
               <div {...getCollapseProps()}>
                 <div className="drop__modal-select--status" >
                   nội dung lựa chọn<br></br>
@@ -138,7 +131,7 @@ function Status_feed() {
 
             <div className="item__column--status body__status">
               <NavLink to="#status_size" className="border__status">
-                <img src={item_info_header_status.image} className="loading" />
+                <img src={item_info_header_status.image} loading="lazy" />
 
               </NavLink>
 
@@ -182,11 +175,11 @@ function Status_feed() {
       </div>
     )
   })
-return (
-  <>
-    {list_up_status_feed_user}
-  </>
-)
+  return (
+    <>
+      {list_up_status_feed_user}
+    </>
+  )
 
 
 }
