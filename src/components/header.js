@@ -2,13 +2,16 @@ import { Component, useState } from 'react';
 import { Router, Routes, useMatch, useResolvedPath, NavLink } from 'react-router-dom';
 import Logo from "./logo_image/logo_talk-to-you.png";
 import Tippy from '@tippyjs/react';
-import 'tippy.js/animations/scale-subtle.css';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/animations/shift-toward.css';
+import "tippy.js/themes/translucent.css";
+// import tippy from 'tippy.js';
 
 import { withErrorBoundary } from "react-error-boundary";
 // import ErrorComponent from './errorBoundary';
 import CustomLink from './customLink';
 import { motion, AnimatePresence } from "framer-motion";
-import Modal from "../component/modal/modal_infomation";
+import Modal from "../components/modal/modal_infomation";
 import ErrorComponent from './errorBoundary';
 
 import Content_create_status_modal from "./pages/home_feed/content_feed/content_create_status_modal";
@@ -23,13 +26,6 @@ function Text_content_modal() {
       <div style={{ 'float': 'right' }}>NV Phong</div>
     </>
   );
-}
-function abc() {
-  return (
-    <div>
-      cr
-    </div>
-  )
 }
 
 function Header() {
@@ -50,7 +46,7 @@ function Header() {
   },
   {
     name_modal: modalOpen_create_status,
-    text_header: "tao bai viet",
+    text_header: "Create status",
     content_modal: <Content_create_status_modal />,
     open_modal: open_think,
     close_modal: close_think,
@@ -84,22 +80,10 @@ function Header() {
           <div className="item__icon item__icon-fa" >
             <motion.i className="fa-light fa-circle-info" onClick={() => (modalOpen_think ? close() : open())}>
             </motion.i>
+            
           </div>
-          {/* <AnimatePresence
-            initial={false}
-            exitBeforeEnter={true}
-            onExitComplete={() => null}
-          >
-            {modalOpen_think && <Modal
-              modalOpen={modalOpen_think}
-              handleClose={close}
-              text_header="Version beta : Talk To You"
-              content_modal={<Text_content_modal />}
-            />}
-          </AnimatePresence> */}
-          {list_content_modal_index}
-
         </div>
+        {list_content_modal_index}
         <div className="header__wrap--item wrap--item-status">
           <div className="text_status--menu">
             <CustomLink to="/feed" >
@@ -121,16 +105,28 @@ function Header() {
           </div>
           <div className="text_status--work">
             <div className="float--work">
-              <Tippy content="Create status" animation="scale-subtle" delay={300}>
-                <div className="box__icon--work" onClick={() => (modalOpen_create_status ? close_think() : open_think())}>
-                  <i class="fa-regular fa-money-check-pen"></i>
+
+              <Tippy
+                content="Create status"
+                animation="shift-toward"
+                delay={200}
+                theme="translucent"
+              >
+                <div className="box__icon--work box_create" id="" 
+                onClick={() => (modalOpen_create_status ? close_think() : open_think())}>
+                  <i class="fa-sharp fa-solid fa-square-pen"></i>
                 </div>
               </Tippy>
-              {/* <Tippy content="Stories" animation="scale-subtle" delay={300}> */}
-                <div className="box__icon--work ">
-                  <i className="fa-regular fa-elevator"></i>
+              <Tippy
+                content="Stories"
+                animation="shift-toward"
+                delay={200}
+                theme="translucent"
+              >
+                <div className="box__icon--work box_stories" id="">
+                  <i class="fa-sharp fa-solid fa-elevator"></i>
                 </div>
-              {/* </Tippy> */}
+              </Tippy>
             </div>
           </div>
         </div>
@@ -143,7 +139,7 @@ function Header() {
 
     </div>
   );
-  
+
 }
 <div>
   <CustomLink></CustomLink>

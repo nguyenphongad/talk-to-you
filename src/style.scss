@@ -39,7 +39,7 @@ body {
             .header__wrap--item {
                 width: 100%;
                 height: 100%;
-                padding: 10px 0px;
+                padding: 5px 0px;
                 display: flex;
                 align-items: center;
                 .item__icon {
@@ -74,7 +74,7 @@ body {
                     transform: scale(1.1);
                 }
                 i:active{
-                    transform: scale(0.85);
+                    transform: scale(0.95);
                 }
             }
 
@@ -92,14 +92,13 @@ body {
                     display: flex;
                     .menu__column--nav {
                         width: 105px;
-                        margin-right: 20px;
+                        margin-right: 15px;
                         .item_header--item {
                             width: 100%;
                             height: 100%;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            margin-right: 10px;
                             a {
                                 width: 100%;
                                 height: 100%;
@@ -114,13 +113,13 @@ body {
                                 transition: all 0.4s;
                                 opacity: 0.85;
                                 i {
-                                    font-size: 20px;
-                                    margin-bottom: 2px;
-                                    margin-bottom: 2px;
+                                    font-size: 17px;
+                                    margin-top: 7px;
+                                    margin-bottom: 3px;
                                 }
                                 .item__text--status {
                                     margin-top: 5px;
-                                    font-size: 13px;
+                                    font-size: 14px;
                                     user-select: none;
                                     letter-spacing: 0.03rem;
                                 }
@@ -134,7 +133,7 @@ body {
                         pointer-events: none;
                         background-color: #8d4176;
                         opacity: 1;
-                        box-shadow: rgba(95, 33, 33, 0.219) 0px 3px 8px;
+                        box-shadow: rgba(95, 33, 33, 0.123) 0px 3px 8px;
                         i {
                             color: #ffffff;
                             font-weight: 600;
@@ -191,31 +190,32 @@ body {
                         display: flex;
                         border-left: 2px solid #8f4879;
                         .box__icon--work {
-                            width: 40px;
-                            height: 39px;
-                            // border: 1px solid ;
+                            width: 45px;
+                            height: 44px;
                             border-radius: 100%;
-                            font-size: 18px;
-                            margin-left: 35px;
+                            font-size: 20px;
+                            margin-left: 30px;
                             cursor: pointer;
-                            padding: 3px;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            // background-color: #fff3fb;
-                            background-color: #B986AA;
-                            color: #fff3fb;
+                            color: #ffffff;
                             transition: all 0.4s;
-                            box-shadow: rgba(0, 0, 0, 0.116) 0px 3px 8px;
+                            background-color: #914c7d;
+                            border:1px solid #a35c8a;
+                            i{
+                                margin: 5px;
+                            }
                         }
                         .box__icon--work:hover {
                             background-color: #af679b;
                             
                         }
                         .box__icon--work:active {
-                            transform: scale(0.85);
+                            transform: scale(0.95);
                         }
                     }
+                    
                 }
             }
             .wrap--item-dropdown {
@@ -224,5 +224,4 @@ body {
         }
     }
     
-
 }

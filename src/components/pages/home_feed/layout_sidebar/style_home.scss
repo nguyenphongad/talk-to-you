@@ -1,5 +1,4 @@
 .menu {
-    width: 240px;
     flex: 2;
     height: 100vh;
     position: sticky;
@@ -20,10 +19,9 @@
         .menu__column--block--item {
             height: 100%;
             margin-bottom: 20px;
-            padding: 5px;
         }
         .menu__column--select-li {
-            flex: 5;
+            flex: 4;
             border-radius: 15px;
             box-shadow: rgba(49, 7, 56, 0.171) 0px 3px 8px;
             overflow: hidden;

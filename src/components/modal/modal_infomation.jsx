@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Backdrop from "./back_drop";
-
+import Tippy from '@tippyjs/react';
 const dropIn = {
     hidden: {
         y: "-100vh",
@@ -26,15 +26,15 @@ const dropIn = {
 const Modal = ({ handleClose, text_header, content_modal }) => {
     return (
         <Backdrop onClick={handleClose} >
-            <motion.div 
-                
+            <motion.div
+
                 onClick={(e) => e.stopPropagation()}
-                className="modal orange-gradient"
+                className="box_modal orange-gradient"
                 variants={dropIn}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                
+
             >
 
                 <div className="modal__header" >
@@ -44,9 +44,17 @@ const Modal = ({ handleClose, text_header, content_modal }) => {
                         </div>
                     </div>
                     <div className="item_header modal__btn--close">
-                        <div onClick={handleClose} className="btn__close--icon">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
+                        <Tippy
+                            content="Close"
+                            animation="shift-toward"
+                            delay={200}
+                            theme="translucent"
+
+                        >
+                            <div onClick={handleClose} className="btn__close--icon">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </Tippy>
                     </div>
                 </div>
                 <div className="modal__body">

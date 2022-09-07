@@ -1,26 +1,23 @@
 import { Component, React } from 'react';
 
-import 'tippy.js/dist/tippy.css';
-
-
 import './style.scss';
-import './component/pages/style_pages.scss';
-import "./component/pages/home_feed/content_feed/style_status_feed.scss";
-import "./component/pages/home_feed/layout_sidebar/style_home.scss";
+import './components/pages/style_pages.scss';
+import "./components/pages/home_feed/content_feed/style_status_feed.scss";
+import "./components/pages/home_feed/layout_sidebar/style_home.scss";
 
 
-import Header from './component/header.js';
+import Header from './components/header.js';
 
 import "./font-awesome-6/css/all.css";
 
 import $ from 'jquery';
 
 import { withErrorBoundary } from "react-error-boundary"
-import ErrorComponent from "./component/errorBoundary";
+import ErrorComponent from "./components/errorBoundary";
 
-import Routes_menu from './component/routes_header';
+import Routes_menu from './components/routes_header';
 
-import ScrollToTop from "./component/pages/scrollToTop";
+import ScrollToTop from "./components/pages/scrollToTop";
 import { motion, AnimatePresence } from "framer-motion";
 
 

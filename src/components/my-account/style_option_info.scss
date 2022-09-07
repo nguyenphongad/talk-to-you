@@ -1,5 +1,5 @@
 .menu__column--my-account {
-    flex: 5;
+    flex: 6;
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -10,7 +10,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        padding: 6px;
+        padding: 7px;
         .background__option--information {
             width: 100%;
             height: 50px;
@@ -29,6 +29,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
             .activate__user {
                 position: relative;
                 z-index: 2;
@@ -75,7 +76,7 @@
             .content__name--user {
                 width: 100%;
                 margin: 5px;
-                margin-top: -20px;
+                margin-top: -25px;
                 a {
                     width: 100%;
                     height: 100%;
@@ -97,7 +98,7 @@
             }
             .content__story--user {
                 width: 85%;
-                height: 80px;
+                height: 100%;
                 border: 1px solid #f5eaf1;
                 border-radius: 5px;
                 padding: 5px;
@@ -109,28 +110,37 @@
                     text-align: center;
                 }
             }
-            .btn__edit--bio{
+
+            .btn__stories--user {
                 width: 100%;
-                padding: 5px;
-                // background: linear-gradient(115deg, #ca1293, #a12f7f 40%, #962875 65%);
-                // box-shadow: #a38d9a4d 0px 2px 7px 0px;
-                border: 1px solid #f1d1e8;
-                border-radius: 15px;
-                cursor: pointer;
-                transition: all 0.4s;
-                font-weight: bold;
-                .text_btn--edit {
-                    color: #822366;
+                display: flex;
+                padding: 0px 10px;
+                .item__btn {
+                    width: 100%;
+                    border: 1px solid #f1d1e8;
+                    background-color: #f7eaf2;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    transition: all 0.4s;
+                    font-weight: bold;
                     text-align: center;
-                    font-size: 15px;
+                    font-size: 16px;
+                    color: #822366;
+                    padding: 3px;
                     i {
-                        margin-right: 10px;
                         font-weight: bold;
                     }
                 }
-            }
-            .btn__edit--story:hover {
-                background-color: #f7e1f1;
+                .btn__edit--bio {
+                    flex: 7;
+                }
+                .btn__next--slide {
+                    flex: 3;
+                    margin-left: 20px;
+                }
+                .item__btn:hover {
+                    background-color: #ebcde3;
+                }
             }
         }
     }
