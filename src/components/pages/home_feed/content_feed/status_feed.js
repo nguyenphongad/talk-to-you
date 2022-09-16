@@ -133,16 +133,19 @@ function Status_feed() {
                       </div>
                     </div>
                   </div>
-                  <Tippy
-                    content="More select"
-                    animation="shift-toward"
-                    delay={200}
-                    theme="translucent"
-                  >
-                    <div className="flex__btn--more" {...getToggleProps()}>
+
+                  <div className="flex__btn--more" {...getToggleProps()}>
+                    <Tippy
+                      content="More select"
+                      animation="shift-toward"
+                      delay={500}
+                      theme="translucent"
+                      placement="left"
+                    >
                       <i class={isExpanded ? "fa-solid fa-caret-up" : "fa-solid fa-ellipsis"} ></i>
-                    </div>
-                  </Tippy>
+                    </Tippy>
+                  </div>
+
                 </div>
               </div>
 

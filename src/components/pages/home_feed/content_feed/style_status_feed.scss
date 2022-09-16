@@ -69,7 +69,7 @@
                 flex-direction: row;
                 .item_control--work {
                     width: 100%;
-                    border: 1px solid #e4bcd8;
+                    border: 1px solid #eed1e5;
                     background-color: #ffe4f73b;
                     // box-shadow: rgba(122, 118, 122, 0.288) 0px 3px 8px;
                     display: flex;
@@ -207,7 +207,7 @@
                                 }
                                 i {
                                     margin-right: 10px;
-                                    margin-top: -2px;
+                                    margin-top: -1px;
                                 }
                                 .icon_tag {
                                     color: #6060e4;
@@ -275,6 +275,7 @@
         background-color: #ffffff;
         box-shadow: #a38d9aa8 0px 2px 7px 0px;
         display: flex;
+        margin-top: 5px;
         .body__actions_status {
             width: 100%;
             display: flex;

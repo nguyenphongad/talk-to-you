@@ -5,7 +5,8 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/shift-toward.css';
 import "tippy.js/themes/translucent.css";
-// import tippy from 'tippy.js';
+import "tippy.js/themes/light.css";
+import "tippy.js/themes/light-border.css";
 
 import { withErrorBoundary } from "react-error-boundary";
 // import ErrorComponent from './errorBoundary';
@@ -78,9 +79,8 @@ function Header() {
             <img src={Logo} alt="logo-talk-to-you" id="id_logo" />
           </a>
           <div className="item__icon item__icon-fa" >
-            <motion.i className="fa-light fa-circle-info" onClick={() => (modalOpen_think ? close() : open())}>
+            <motion.i className="fa-duotone fa-circle-info" onClick={() =>(modalOpen_think ? close() : open())}>
             </motion.i>
-            
           </div>
         </div>
         {list_content_modal_index}
@@ -110,21 +110,21 @@ function Header() {
                 content="Create status"
                 animation="shift-toward"
                 delay={200}
-                theme="translucent"
+                theme="light"
               >
                 <div className="box__icon--work box_create" id="" 
                 onClick={() => (modalOpen_create_status ? close_think() : open_think())}>
-                  <i class="fa-sharp fa-solid fa-square-pen"></i>
+                  <i class="fa-duotone fa-pen-to-square"></i>
                 </div>
               </Tippy>
               <Tippy
                 content="Stories"
                 animation="shift-toward"
                 delay={200}
-                theme="translucent"
+                theme="light"
               >
                 <div className="box__icon--work box_stories" id="">
-                  <i class="fa-sharp fa-solid fa-elevator"></i>
+                <i class="fa-duotone fa-elevator"></i>
                 </div>
               </Tippy>
             </div>

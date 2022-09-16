@@ -10,7 +10,7 @@ const dropIn = {
         y: "0",
         opacity: 1,
         transition: {
-            duration: 0.2,
+            duration:0.2,
             type: "spring",
             damping: 40,
             stiffness: 700,
@@ -34,7 +34,6 @@ const Modal = ({ handleClose, text_header, content_modal }) => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-
             >
 
                 <div className="modal__header" >
@@ -47,8 +46,9 @@ const Modal = ({ handleClose, text_header, content_modal }) => {
                         <Tippy
                             content="Close"
                             animation="shift-toward"
-                            delay={200}
-                            theme="translucent"
+                            delay={500}
+                            theme="light"
+                            placement="left"
 
                         >
                             <div onClick={handleClose} className="btn__close--icon">
