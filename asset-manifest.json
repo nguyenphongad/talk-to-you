@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/talk-to-you/static/css/main.23ce172c.css",
-    "main.js": "/talk-to-you/static/js/main.16aeb59b.js",
+    "main.css": "/talk-to-you/static/css/main.c343ad87.css",
+    "main.js": "/talk-to-you/static/js/main.a052e1dd.js",
+    "static/media/video_status_1.mp4": "/talk-to-you/static/media/video_status_1.ffb0cd2bf240971f6326.mp4",
     "static/media/fa-duotone-900.ttf": "/talk-to-you/static/media/fa-duotone-900.7aaed8882e9e1b7d6613.ttf",
     "static/media/fa-thin-100.ttf": "/talk-to-you/static/media/fa-thin-100.e979819d1e09a53c99e5.ttf",
     "static/media/fa-light-300.ttf": "/talk-to-you/static/media/fa-light-300.c92b45ddbbac86f40dd8.ttf",
@@ -11,19 +12,22 @@
     "static/media/fa-duotone-900.woff2": "/talk-to-you/static/media/fa-duotone-900.0f4932ef8d84d6fe728f.woff2",
     "static/media/fa-light-300.woff2": "/talk-to-you/static/media/fa-light-300.3a5e485d10f65b240480.woff2",
     "static/media/fa-regular-400.woff2": "/talk-to-you/static/media/fa-regular-400.0119858ade891ff7e5cf.woff2",
+    "static/media/anh_status_ngoc.jpg": "/talk-to-you/static/media/anh_status_ngoc.743e1292a3f26c6849fa.jpg",
     "static/media/fa-solid-900.woff2": "/talk-to-you/static/media/fa-solid-900.dd93dc2148412b8ed08a.woff2",
     "static/media/fa-brands-400.ttf": "/talk-to-you/static/media/fa-brands-400.aa78803d79164416af03.ttf",
     "static/media/logo_talk-to-you.png": "/talk-to-you/static/media/logo_talk-to-you.20e3688f37bf2d387a8e.png",
     "static/media/avatar_IU.jpg": "/talk-to-you/static/media/avatar_IU.d3b468f09ff1b5c5412b.jpg",
     "static/media/fa-brands-400.woff2": "/talk-to-you/static/media/fa-brands-400.7fe6c951dbf3b62b07e1.woff2",
+    "static/media/avatar_ngoc.jpg": "/talk-to-you/static/media/avatar_ngoc.4516733c255301bdc9d3.jpg",
+    "static/media/picture_status.jpg": "/talk-to-you/static/media/picture_status.c2769e4a99051d9b04ae.jpg",
     "static/media/fa-v4compatibility.ttf": "/talk-to-you/static/media/fa-v4compatibility.a6c478646f0d356e9a05.ttf",
     "static/media/fa-v4compatibility.woff2": "/talk-to-you/static/media/fa-v4compatibility.b76a469acd22a118b0b7.woff2",
     "index.html": "/talk-to-you/index.html",
-    "main.23ce172c.css.map": "/talk-to-you/static/css/main.23ce172c.css.map",
-    "main.16aeb59b.js.map": "/talk-to-you/static/js/main.16aeb59b.js.map"
+    "main.c343ad87.css.map": "/talk-to-you/static/css/main.c343ad87.css.map",
+    "main.a052e1dd.js.map": "/talk-to-you/static/js/main.a052e1dd.js.map"
   },
   "entrypoints": [
-    "static/css/main.23ce172c.css",
-    "static/js/main.16aeb59b.js"
+    "static/css/main.c343ad87.css",
+    "static/js/main.a052e1dd.js"
   ]
 }
