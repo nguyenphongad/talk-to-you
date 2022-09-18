@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import Tippy from '@tippyjs/react';
 
-
 class Option_infomation extends Component {
     render() {
         return (

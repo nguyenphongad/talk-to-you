@@ -2,7 +2,11 @@ import React from 'react'
 
 function Content_create_status_modal() {
     return (
-        <div>Content create status modal</div>
+        <div className="box__create--status">
+            <div >
+                x
+            </div>
+        </div>
     )
 }
 

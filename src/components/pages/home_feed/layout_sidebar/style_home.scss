@@ -93,4 +93,12 @@
     border-left: 1px solid #f3d1e9;
     padding: 20px;
     padding-top: 90px;
+    .body__complementary{
+        .box__row--comlementary{
+            width: 100%;
+            box-shadow: #a38d9a8e 0px 2px 7px 0px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    }
 }

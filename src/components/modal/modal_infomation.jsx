@@ -10,7 +10,7 @@ const dropIn = {
         y: "0",
         opacity: 1,
         transition: {
-            duration:0.2,
+            duration: 0.2,
             type: "spring",
             damping: 40,
             stiffness: 700,
@@ -35,7 +35,6 @@ const Modal = ({ handleClose, text_header, content_modal }) => {
                 animate="visible"
                 exit="exit"
             >
-
                 <div className="modal__header" >
                     <div className="item_header header__text">
                         <div className="text_heading_header">
