@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import "./style_modal_select.scss";
 
-const Backdrop = ({ children, onClick }) => {
+const Backdrop_modal_select = ({ children, onClick }) => {
 
     return (
         <motion.div
@@ -16,4 +16,4 @@ const Backdrop = ({ children, onClick }) => {
     );
 };
 
-export default Backdrop;
+export default Backdrop_modal_select;

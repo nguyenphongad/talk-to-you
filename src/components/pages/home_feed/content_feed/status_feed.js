@@ -16,7 +16,6 @@ import Modal_select from "../../../modal_select_status/modal_select";
 import { motion, AnimatePresence } from "framer-motion";
 // import {useTransition} from "react-spring";
 
-
 function Status_feed() {
 
   const up_header_status_user = [
@@ -36,6 +35,7 @@ function Status_feed() {
       view_like: 5.5 + "M",
       view_share: 17.5 + "K",
 
+
     },
     {
       id: 2,
@@ -54,164 +54,155 @@ function Status_feed() {
       view_like: 100,
       view_share: 2,
 
+
     },
   ];
-  // const [popup, myPopup] = useState(false);
 
-  // const openPopup = () => {
-  //   myPopup(!popup);
-  // }
-  // const closePopup = () => {
-  //   myPopup(false);
-  // }
-
-  const [popup_select, setModalOpen] = useState(false);
+  const [modal_select, setModalOpen] = useState(false);
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
 
   const list_up_status_feed_user = up_header_status_user.map((item_info_header_status) => {
     return (
-      <div className="box__status" >
-        <div className="body__status--table">
-          <div className="nav__column--tr">
-            <div className="item__column--status header__status">
-              {/* header */}
-              <div className="flex--column">
-                <div className="block__item--header block__avatar--user">
-                  <div className="border__avatar--user">
-                    <NavLink to="#user" className="">
-                      <img src={item_info_header_status.image_avatar} loading="lazy" />
-                    </NavLink>
-                  </div>
-                </div>
-                <div className="block__item--header block__content--picture">
-                  <div className="flex__box--inline">
-                    <div className="item__inline">
-                      <div className="name-user">
-                        <NavLink to="#user">
-                          <span className="text__name--user hover_text_under">
-                            {item_info_header_status.firt_name}&#160;{item_info_header_status.last_name}
-                          </span>
-                          {item_info_header_status.active_license ? <i class="fa-solid fa-badge-check" title="Trang cá nhân được xác thực bởi chủ thương hiệu"></i> : ""}
-                        </NavLink>
-                      </div>
+      <>
+        <div className="box__status" >
+          <div className="body__status--table">
+            <div className="nav__column--tr">
+              <div className="item__column--status header__status">
+                {/* header */}
+                <div className="flex--column">
+                  <div className="block__item--header block__avatar--user">
+                    <div className="border__avatar--user">
+                      <NavLink to="#user" className="">
+                        <img src={item_info_header_status.image_avatar} loading="lazy" />
+                      </NavLink>
                     </div>
-                    <div className="item__inline">
-                      <div className="id_user">
-                        <NavLink to="#user">
-                          <span className="hover_text_under">
-                            {item_info_header_status.id_user}
-                          </span>
-                        </NavLink>
-                        <i class="fa-regular fa-period"></i>
-                        <div title="Feeds" className="icon_tag">
-                          <span className="hover_text_under">
-                            <i class="fa-solid fa-square-rss"></i>
-                          </span>
+                  </div>
+                  <div className="block__item--header block__content--picture">
+                    <div className="flex__box--inline">
+                      <div className="item__inline">
+                        <div className="name-user">
+                          <NavLink to="#user">
+                            <span className="text__name--user hover_text_under">
+                              {item_info_header_status.firt_name}&#160;{item_info_header_status.last_name}
+                            </span>
+                            {item_info_header_status.active_license ? <i class="fa-solid fa-badge-check" title="Trang cá nhân được xác thực bởi chủ thương hiệu"></i> : ""}
+                          </NavLink>
                         </div>
+                      </div>
+                      <div className="item__inline">
+                        <div className="id_user">
+                          <NavLink to="#user">
+                            <span className="hover_text_under">
+                              {item_info_header_status.id_user}
+                            </span>
+                          </NavLink>
+                          <i class="fa-regular fa-period"></i>
+                          <div title="Feeds" className="icon_tag">
+                            <span className="hover_text_under">
+                              <i class="fa-solid fa-square-rss"></i>
+                            </span>
+                          </div>
 
-                        <i class="fa-regular fa-period"></i>
-                        <NavLink to="#link_status">
-                          <span className="hover_text_under">
-                            {item_info_header_status.date_create_status}
-                          </span>
-                        </NavLink>
+                          <i class="fa-regular fa-period"></i>
+                          <NavLink to="#link_status">
+                            <span className="hover_text_under">
+                              {item_info_header_status.date_create_status}
+                            </span>
+                          </NavLink>
 
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="flex__btn--more" 
-                  onClick={() =>(popup_select ? close() : open())}
-                  >
-                    <i class="fa-solid fa-ellipsis" ></i>
-                  </div>
+                    <div className="flex__btn--more"
+                      onClick={() => (modal_select ? close() : open())}
+                    >
+                      <i class="fa-solid fa-ellipsis" ></i>
+                    </div>
 
+                  </div>
+                </div>
+
+
+                <div className="content__status">
+                  {item_info_header_status.content}
                 </div>
               </div>
 
-
-              <div className="content__status">
-                {item_info_header_status.content}
-              </div>
-            </div>
-
-            <div className="item__column--status body__status">
-              <NavLink to="#status_size" className="border__status">
-                {/* <video  controls>
+              <div className="item__column--status body__status">
+                <NavLink to="#status_size" className="border__status">
+                  {/* <video  controls>
                   <source src={item_info_header_status.image} ></source>
                 </video> */}
-                <img src={item_info_header_status.image} loading="lazy" />
+                  <img src={item_info_header_status.image} loading="lazy" />
 
-              </NavLink>
+                </NavLink>
 
-            </div>
+              </div>
 
-            <div className="item__column control feed__actions__status">
-              <div className="body__actions_status">
-                <div className="item__actions_feed view__actions ">
-                  <div className="item_btn_feed--view hover_text_under">
-                    {item_info_header_status.view_comment} comments
-                  </div>
-                  <div className="item_btn_feed--view hover_text_under">
-                    {item_info_header_status.view_like} like
-                  </div>
-                  <div className="item_btn_feed--view hover_text_under">
-                    {item_info_header_status.view_share} shares
-                  </div>
-                </div>
-                <div className="item__actions_feed feed__action--bar">
-                  <div className="item__btn--work-feed box__comment">
-                    <i class="fa-regular fa-comment-lines"></i>
-                    <div className="text__btn--bar"> Comment</div>
-                  </div>
-                  <div className="item__btn--work-feed box__tym">
-                    <div className="btn__tym">
-                      <i class="fa-light fa-heart"></i>
-                      {/* <i class="fa-solid fa-heart"></i> */}
+              <div className="item__column control feed__actions__status">
+                <div className="body__actions_status">
+                  <div className="item__actions_feed view__actions ">
+                    <div className="item_btn_feed--view hover_text_under">
+                      {item_info_header_status.view_comment} comments
+                    </div>
+                    <div className="item_btn_feed--view hover_text_under">
+                      {item_info_header_status.view_like} like
+                    </div>
+                    <div className="item_btn_feed--view hover_text_under">
+                      {item_info_header_status.view_share} shares
                     </div>
                   </div>
-                  <div className="item__btn--work-feed box__share">
-                    <i class="fa-regular fa-share-nodes"></i>
-                    <div className="text__btn--bar">Share</div>
+                  <div className="item__actions_feed feed__action--bar">
+                    <div className="item__btn--work-feed box__comment">
+                      <i class="fa-regular fa-comment-lines"></i>
+                      <div className="text__btn--bar"> Comment</div>
+                    </div>
+                    <div className="item__btn--work-feed box__tym">
+                      <div className="btn__tym">
+                        <i class="fa-light fa-heart"></i>
+                        {/* <i class="fa-solid fa-heart"></i> */}
+                      </div>
+                    </div>
+                    <div className="item__btn--work-feed box__share">
+                      <i class="fa-regular fa-share-nodes"></i>
+                      <div className="text__btn--bar">Share</div>
+                    </div>
                   </div>
                 </div>
               </div>
+
+
             </div>
-
-
           </div>
-        </div>
 
-      </div >
+        </div >
+        
+
+      </>
     )
   })
   return (
     <>
       {list_up_status_feed_user}
-      {/* {popup ? <div class="box_dropdown_more--select_status">
-        nội dung lựa chọn<br></br>
-        nội dung lựa chọn<br></br>
-        <div onClick={closePopup}>close</div>
-      </div> : ""} */}
       <AnimatePresence
           initial={false}
           exitBeforeEnter={true}
           onExitComplete={() => null}
         >
-          {popup_select && <Modal_select
-            modalOpen={popup_select}
+          {modal_select && <Modal_select
+            modalOpen={modal_select}
             handleClose={close}
-            text_header="text header"
-            content_modal="chọn"
           />}
         </AnimatePresence>
     </>
   )
 
-
 }
+
+
 
 export default Status_feed;
 
