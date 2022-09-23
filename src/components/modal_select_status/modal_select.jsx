@@ -3,46 +3,46 @@ import Backdrop from "./back_drop";
 import Tippy from '@tippyjs/react';
 const dropIn = {
     hidden: {
-        y: "-100vh",
+        y: "400vh",
         opacity: 0,
     },
     visible: {
         y: "0",
         opacity: 1,
         transition: {
-            duration: 0.2,
+            duration: 0,
             type: "spring",
-            damping: 40,
-            stiffness: 700,
+            damping: 50,
+            stiffness: 800,
         },
     },
     exit: {
-        y: "100vh",
+        y: "400vh",
         opacity: 0,
     },
 };
 
 
-const Modal = ({ handleClose, text_header, content_modal }) => {
+const Modal_select = ({ handleClose, text_header, content_modal }) => {
     return (
         <Backdrop onClick={handleClose} >
             <motion.div
 
                 onClick={(e) => e.stopPropagation()}
-                className="box_modal orange-gradient"
+                className="box_modal_a orange-gradient"
                 variants={dropIn}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
             >
                 <div className="modal__header" >
-                    <div className="item_header header__text">
-                        <div className="text_heading_header">
+                    <div >
+                        <div>
                             {text_header}
                         </div>
                     </div>
-                    <div className="item_header modal__btn--close">
-                        <div onClick={handleClose} className="btn__close--icon">
+                    <div>
+                        <div onClick={handleClose} >
                             <i class="fa-solid fa-xmark"></i>
                         </div>
                     </div>
@@ -58,4 +58,4 @@ const Modal = ({ handleClose, text_header, content_modal }) => {
 };
 
 
-export default Modal;
+export default Modal_select;

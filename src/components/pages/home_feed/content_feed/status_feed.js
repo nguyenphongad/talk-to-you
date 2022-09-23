@@ -11,32 +11,10 @@ import Video_1 from "../../../videos/video_status_1.mp4";
 import { NavLink } from 'react-router-dom';
 import useCollapse from 'react-collapsed';
 import Tippy from '@tippyjs/react';
-import { CButton, CCollapse, CCard, CCardBody } from '@coreui/react';
-import '@coreui/coreui/dist/css/coreui.min.css';
+import Modal_select from "../../../modal_select_status/modal_select";
 
-function Abc() {
-  const [visible, setVisible] = useState(false);
-  return (
-    <>
-      <CButton href="#" onClick={(event) => {
-        event.preventDefault()
-        setVisible(!visible)
-      }}>
-        Link
-      </CButton>
-      <CButton onClick={() => setVisible(!visible)}>Button</CButton>
-      <CCollapse visible={visible}>
-        <CCard className="mt-3">
-          <CCardBody>
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-            sapiente ea proident.
-          </CCardBody>
-        </CCard>
-      </CCollapse>
-    </>
-  );
-}
+import { motion, AnimatePresence } from "framer-motion";
+// import {useTransition} from "react-spring";
 
 
 function Status_feed() {
@@ -78,9 +56,19 @@ function Status_feed() {
 
     },
   ];
+  // const [popup, myPopup] = useState(false);
 
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({ duration: 200 });
-  // const { getCollapseProps_2, getToggleProps_2, isExpanded_2 } = useCollapse({ duration: 200 });
+  // const openPopup = () => {
+  //   myPopup(!popup);
+  // }
+  // const closePopup = () => {
+  //   myPopup(false);
+  // }
+
+  const [popup_select, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
 
   const list_up_status_feed_user = up_header_status_user.map((item_info_header_status) => {
     return (
@@ -134,28 +122,15 @@ function Status_feed() {
                     </div>
                   </div>
 
-                  <div className="flex__btn--more" {...getToggleProps()}>
-                    <Tippy
-                      content="More select"
-                      animation="shift-toward"
-                      delay={500}
-                      theme="translucent"
-                      placement="left"
-                    >
-                      <i class={isExpanded ? "fa-solid fa-caret-up" : "fa-solid fa-ellipsis"} ></i>
-                    </Tippy>
+                  <div className="flex__btn--more" 
+                  onClick={() =>(popup_select ? close() : open())}
+                  >
+                    <i class="fa-solid fa-ellipsis" ></i>
                   </div>
 
                 </div>
               </div>
 
-              <div {...getCollapseProps()}>
-                <div className="drop__modal-select--status" >
-                  nội dung lựa chọn<br></br>
-                  nội dung lựa chọn<br></br>
-
-                </div>
-              </div>
 
               <div className="content__status">
                 {item_info_header_status.content}
@@ -208,12 +183,30 @@ function Status_feed() {
 
           </div>
         </div>
+
       </div >
     )
   })
   return (
     <>
       {list_up_status_feed_user}
+      {/* {popup ? <div class="box_dropdown_more--select_status">
+        nội dung lựa chọn<br></br>
+        nội dung lựa chọn<br></br>
+        <div onClick={closePopup}>close</div>
+      </div> : ""} */}
+      <AnimatePresence
+          initial={false}
+          exitBeforeEnter={true}
+          onExitComplete={() => null}
+        >
+          {popup_select && <Modal_select
+            modalOpen={popup_select}
+            handleClose={close}
+            text_header="text header"
+            content_modal="chọn"
+          />}
+        </AnimatePresence>
     </>
   )
 

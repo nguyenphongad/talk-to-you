@@ -18,9 +18,7 @@ import ErrorComponent from "./components/errorBoundary";
 import Routes_menu from './components/routes_header';
 
 import ScrollToTop from "./components/pages/scrollToTop";
-import { motion, AnimatePresence } from "framer-motion";
-
-
+import '@coreui/coreui/dist/css/coreui.min.css';
 function App() {
   return (
     <div className="App">
