@@ -87,7 +87,16 @@ function Status_feed() {
                             <span className="text__name--user hover_text_under">
                               {item_info_header_status.firt_name}&#160;{item_info_header_status.last_name}
                             </span>
-                            {item_info_header_status.active_license ? <i class="fa-solid fa-badge-check" title="Trang cá nhân được xác thực bởi chủ thương hiệu"></i> : ""}
+                            {item_info_header_status.active_license ?
+                              <Tippy
+                                content="Trang cá nhân được xác thực bởi chủ thương hiệu"
+                                animation="scale-extreme"
+                                delay={200}
+                                theme="material"
+                              >
+                                <i class="fa-solid fa-badge-check" ></i>
+                              </Tippy>
+                              : ""}
                           </NavLink>
                         </div>
                       </div>
@@ -99,17 +108,33 @@ function Status_feed() {
                             </span>
                           </NavLink>
                           <i class="fa-regular fa-period"></i>
-                          <div title="Feeds" className="icon_tag">
-                            <span className="hover_text_under">
-                              <i class="fa-solid fa-square-rss"></i>
-                            </span>
+
+
+                          <div className="icon_tag">
+                            <Tippy
+                              content="Feeds"
+                              animation="scale-extreme"
+                              delay={200}
+                              theme="material"
+                            >
+                              <span className="hover_text_under">
+                                <i class="fa-solid fa-square-rss"></i>
+                              </span>
+                            </Tippy>
                           </div>
 
                           <i class="fa-regular fa-period"></i>
                           <NavLink to="#link_status">
-                            <span className="hover_text_under">
-                              {item_info_header_status.date_create_status}
-                            </span>
+                            <Tippy
+                              content={item_info_header_status.date_create_status}
+                              animation="scale-extreme"
+                              delay={200}
+                              theme="material"
+                            >
+                              <span className="hover_text_under">
+                                {item_info_header_status.date_create_status}
+                              </span>
+                            </Tippy>
                           </NavLink>
 
                         </div>
@@ -179,7 +204,7 @@ function Status_feed() {
           </div>
 
         </div >
-        
+
 
       </>
     )
@@ -188,15 +213,15 @@ function Status_feed() {
     <>
       {list_up_status_feed_user}
       <AnimatePresence
-          initial={false}
-          exitBeforeEnter={true}
-          onExitComplete={() => null}
-        >
-          {modal_select && <Modal_select
-            modalOpen={modal_select}
-            handleClose={close}
-          />}
-        </AnimatePresence>
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {modal_select && <Modal_select
+          modalOpen={modal_select}
+          handleClose={close}
+        />}
+      </AnimatePresence>
     </>
   )
 

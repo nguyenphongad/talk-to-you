@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import Backdrop from "./back_drop";
-import Tippy from '@tippyjs/react';
 const dropIn = {
     hidden: {
-        y: "-100vh",
+        // y: "-100vh",
         opacity: 0,
+        scale : 0
     },
     visible: {
-        y: "0",
+        // y: "0",
         opacity: 1,
         transition: {
             duration: 0.2,
@@ -15,10 +15,12 @@ const dropIn = {
             damping: 40,
             stiffness: 700,
         },
+        scale : 1
     },
     exit: {
-        y: "100vh",
+        // y: "100vh",
         opacity: 0,
+        scale : 0
     },
 };
 
@@ -41,12 +43,14 @@ const Modal = ({ handleClose, text_header, content_modal }) => {
                             {text_header}
                         </div>
                     </div>
+                    
                     <div className="item_header modal__btn--close">
                         <div onClick={handleClose} className="btn__close--icon">
                             <i class="fa-solid fa-xmark"></i>
                         </div>
                     </div>
                 </div>
+                <div class="btn_top_animations"></div>
                 <div className="modal__body">
                     <div>{content_modal}</div>
                 </div>

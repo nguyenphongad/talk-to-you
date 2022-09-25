@@ -4,9 +4,11 @@ import Logo from "./logo_image/logo_talk-to-you.png";
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/shift-toward.css';
+import 'tippy.js/animations/scale-extreme.css';
 import "tippy.js/themes/translucent.css";
 import "tippy.js/themes/light.css";
 import "tippy.js/themes/light-border.css";
+import "tippy.js/themes/material.css";
 
 import { withErrorBoundary } from "react-error-boundary";
 // import ErrorComponent from './errorBoundary';
@@ -33,14 +35,19 @@ function Header() {
 
   const [modalOpen_think, setModalOpen] = useState(false);
   const [modalOpen_create_status, setModalOpent] = useState(false);
-  const close = () => setModalOpen(false);
-  const open = () => setModalOpen(true);
 
-  const close_think = () => setModalOpent(false);
+  const open = () => setModalOpen(true);
+  const close = () => setModalOpen(false);
+
+
   const open_think = () => setModalOpent(true);
+  const close_think = () => setModalOpent(false);
+
+
+
   const content_modal_index = [{
     name_modal: modalOpen_think,
-    text_header: "Version beta : Talk To You",
+    text_header: "Version beta : Talk To You (1.9.24)",
     content_modal: <Text_content_modal />,
     open_modal: open,
     close_modal: close,
@@ -75,12 +82,19 @@ function Header() {
     <div className="header">
       <div className='header__wrap--row'>
         <div className="header__wrap--item wrap--item-logo">
-          <a href="#home" className="item__icon item__icon-logo">
-            <img src={Logo} alt="logo-talk-to-you" id="id_logo" />
-          </a>
+          <div className="item__icon item__icon--logo">
+            <a href="#home" >
+              <img src={Logo} alt="logo-talk-to-you" id="id_logo" />
+            </a>
+          </div>
+
           <div className="item__icon item__icon-fa" >
-            <motion.i className="fa-duotone fa-circle-info" onClick={() =>(modalOpen_think ? close() : open())}>
-            </motion.i>
+            <div className="nav__checked_navication" onClick={() => (modalOpen_think ? close() : open())}>
+              <div>Version</div>
+              <motion.i className="fa-duotone fa-circle-info">
+              </motion.i>
+            </div>
+
           </div>
         </div>
         {list_content_modal_index}
@@ -112,8 +126,8 @@ function Header() {
                 delay={200}
                 theme="light"
               >
-                <div className="box__icon--work box_create" id="" 
-                onClick={() => (modalOpen_create_status ? close_think() : open_think())}>
+                <div className="box__icon--work box_create" id=""
+                  onClick={() => (modalOpen_create_status ? close_think() : open_think())}>
                   <i class="fa-duotone fa-pen-to-square"></i>
                 </div>
               </Tippy>
@@ -124,7 +138,7 @@ function Header() {
                 theme="light"
               >
                 <div className="box__icon--work box_stories" id="">
-                <i class="fa-duotone fa-elevator"></i>
+                  <i class="fa-duotone fa-elevator"></i>
                 </div>
               </Tippy>
             </div>
@@ -134,7 +148,6 @@ function Header() {
 
         </div>
       </div>
-
 
 
     </div>
