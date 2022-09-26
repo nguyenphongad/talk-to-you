@@ -124,7 +124,7 @@ function Header() {
                 content="Create status"
                 animation="shift-toward"
                 delay={200}
-                theme="light"
+                theme="material"
               >
                 <div className="box__icon--work box_create" id=""
                   onClick={() => (modalOpen_create_status ? close_think() : open_think())}>
@@ -135,7 +135,7 @@ function Header() {
                 content="Stories"
                 animation="shift-toward"
                 delay={200}
-                theme="light"
+                theme="material"
               >
                 <div className="box__icon--work box_stories" id="">
                   <i class="fa-duotone fa-elevator"></i>

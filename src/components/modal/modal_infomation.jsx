@@ -4,13 +4,13 @@ const dropIn = {
     hidden: {
         // y: "-100vh",
         opacity: 0,
-        scale : 0
+        scale : 0,
     },
     visible: {
         // y: "0",
         opacity: 1,
         transition: {
-            duration: 0.2,
+            duration: 0.3,
             type: "spring",
             damping: 40,
             stiffness: 700,
@@ -20,7 +20,10 @@ const dropIn = {
     exit: {
         // y: "100vh",
         opacity: 0,
-        scale : 0
+        scale : 0, 
+        transition : {
+            duration : 0.15
+        }
     },
 };
 

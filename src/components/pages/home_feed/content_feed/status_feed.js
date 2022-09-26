@@ -45,7 +45,7 @@ function Status_feed() {
       active_license: false,
       id_user: "@ngocpham509",
       active_type_status: "fa-solid fa-badge-check",
-      date_create_status: 2 + " phút trước",
+      date_create_status: 6 + " phút trước",
 
       content: "Ngày hôm nay thật vui 🤣",
       image: Picture_status_2,
@@ -108,8 +108,6 @@ function Status_feed() {
                             </span>
                           </NavLink>
                           <i class="fa-regular fa-period"></i>
-
-
                           <div className="icon_tag">
                             <Tippy
                               content="Feeds"

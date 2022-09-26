@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Complementary_control from "../home_feed/layout_sidebar/complementary_control";
 
 class Watching extends Component {
     render() {
@@ -46,6 +47,7 @@ class Watching extends Component {
                         watching<br></br>
 
                     </div>
+                    <Complementary_control/>
                 </div>
             </div>
         )

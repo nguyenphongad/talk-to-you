@@ -99,7 +99,7 @@ function Create_status_feed() {
                     {modalOpen && <Modal
                         modalOpen={modalOpen}
                         handleClose={close}
-                        text_header="Create status"
+                        text_header="Create a post"
                         content_modal={<Content_create_status_modal />}
                     />}
 
