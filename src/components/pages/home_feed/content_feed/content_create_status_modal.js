@@ -6,10 +6,7 @@ function Content_create_status_modal() {
 
     const searchInput = useRef(null);
 
-    useEffect(() => {
-        // current property is refered to input element
-        searchInput.current.focus();
-    }, [])
+    useEffect(() => { searchInput.current.focus()}, [])
 
     return (
         <div className="box__create--status">
@@ -32,8 +29,8 @@ function Content_create_status_modal() {
                             <div className="item__column_option share__change-button">
                                 <div className="btn__change--share">
                                     <i class="fa-solid fa-earth-americas"></i>
-                                    Công khai
-                                    <i class="fa-duotone fa-caret-right"></i>
+                                    <span>Công khai</span>
+                                    <i class="fa-solid fa-caret-right"></i>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +50,7 @@ function Content_create_status_modal() {
             </div>
             <div className="text_warning">
                 <span>
-                    Chưa thể đăng bài viết trong lúc này.
+                    Chưa thể đăng bài viết trong lúc này
                 </span>
             </div>
             <button className="artdeco-button" >Đăng</button>

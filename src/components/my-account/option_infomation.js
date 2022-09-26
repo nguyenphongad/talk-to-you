@@ -12,11 +12,8 @@ class Option_infomation extends Component {
                     <div className="background__option--information"></div>
 
                     <div className="box__content--information">
-                        <div className="activate__user" title="Activate">
-                            <i class="fa-solid fa-circle"></i>
-                        </div>
+
                         <Link to="#user" className="border__avatar--user">
-                            <i class="fa-solid fa-comment"></i>
                             <img src={Avatar} alt="avatar" className="avatar__img" />
                         </Link>
 

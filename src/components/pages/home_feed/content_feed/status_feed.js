@@ -168,14 +168,47 @@ function Status_feed() {
               <div className="item__column control feed__actions__status">
                 <div className="body__actions_status">
                   <div className="item__actions_feed view__actions ">
-                    <div className="item_btn_feed--view hover_text_under">
-                      {item_info_header_status.view_comment} comments
+                    <div className="item_btn_feed--view ">
+                      <Tippy
+                        content={item_info_header_status.view_comment + " comments"}
+                        animation="scale-extreme"
+                        delay={200}
+                        theme="material"
+                      >
+
+                        <span className="hover_text_under">
+                          {item_info_header_status.view_comment} comments
+                        </span>
+
+                      </Tippy>
                     </div>
-                    <div className="item_btn_feed--view hover_text_under">
-                      {item_info_header_status.view_like} like
+
+
+                    <div className="item_btn_feed--view">
+                      <Tippy
+                        content={item_info_header_status.view_like + " likes"}
+                        animation="scale-extreme"
+                        delay={200}
+                        theme="material"
+                      >
+                        <span className="hover_text_under">
+                          {item_info_header_status.view_like} like
+                        </span>
+
+                      </Tippy>
                     </div>
-                    <div className="item_btn_feed--view hover_text_under">
-                      {item_info_header_status.view_share} shares
+                    <div className="item_btn_feed--view">
+                      <Tippy
+                        content={item_info_header_status.view_share + " shares"}
+                        animation="scale-extreme"
+                        delay={200}
+                        theme="material"
+                      >
+
+                        <span className="hover_text_under">
+                          {item_info_header_status.view_share} shares
+                        </span>
+                      </Tippy>
                     </div>
                   </div>
                   <div className="item__actions_feed feed__action--bar">

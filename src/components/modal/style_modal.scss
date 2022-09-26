@@ -11,7 +11,7 @@
     z-index: 99;
 }
 .box_modal {
-    max-width: 600px;
+    max-width: 700px;
     border-radius: 15px;
     background-color: #fff3fb;
     color: #822366;
@@ -72,8 +72,8 @@
     }
     .btn_top_animations {
         width: 100%;
-        height: 3px;
-        background-color: #c9a5be;
+        height: 2px;
+        background-color: #dfbdd5;
         border-radius: 5px;
         animation: an_btn_top_animations 0.5s forwards ease-out;
     }
